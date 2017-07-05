@@ -11,7 +11,8 @@ import org.elasticsearch.common.transport.InetSocketTransportAddress;
 import org.elasticsearch.index.query.BoolQueryBuilder;  
 import org.elasticsearch.index.query.QueryBuilders;  
 import org.elasticsearch.index.query.QueryStringQueryBuilder.Operator;  
-import org.elasticsearch.search.SearchHit;  
+import org.elasticsearch.search.SearchHit;
+import org.elasticsearch.search.SearchHits;
 import org.elasticsearch.search.aggregations.AggregationBuilders;  
 import org.elasticsearch.search.aggregations.Aggregations;  
 import org.elasticsearch.search.aggregations.bucket.histogram.DateHistogramBuilder;  
@@ -22,7 +23,9 @@ import org.elasticsearch.search.aggregations.bucket.terms.Terms;
 import org.elasticsearch.search.aggregations.bucket.terms.TermsBuilder;
 import org.elasticsearch.search.aggregations.metrics.MetricsAggregationBuilder;
 import org.elasticsearch.search.aggregations.metrics.cardinality.Cardinality;
-import org.joda.time.DateTime;  
+import org.joda.time.DateTime;
+
+import searchFromES.SearchFromES;  
 public class ElasticsearchTools {
 
 	
@@ -50,9 +53,10 @@ public class ElasticsearchTools {
   
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println("开始创建索引");
-		client.admin().indices().prepareCreate("xxk").get();
-		System.out.println("索引创建成功");
+//		System.out.println("开始创建索引");
+//		client.admin().indices().prepareCreate("xxk").get();
+//		System.out.println("索引创建成功");
+		SearchFromES.multiQuery("", client);
 	}
 	/*** 
      *  获取search请求的结果，并输出打印结果信息 
