@@ -56,9 +56,10 @@ public class ElasticsearchTools {
 //		System.out.println("开始创建索引");
 //		client.admin().indices().prepareCreate("xxk").get();
 //		System.out.println("索引创建成功");
-		SearchFromES.multiQuery("国家", client);
+		SearchFromES.aggSearch2(client,"山大","");
 		System.out.println("end");
 	}
+	
 	/*** 
      *  获取search请求的结果，并输出打印结果信息 
      * @param search 
@@ -87,7 +88,6 @@ public class ElasticsearchTools {
      * 每一天的select count(distinct(actid)) from talbe group by date 
      */  
     public static void countDistinctByField(){  
-  
   
         //构造search请求  
         SearchRequestBuilder search=client.prepareSearch("userlog*").setTypes("logs");  
