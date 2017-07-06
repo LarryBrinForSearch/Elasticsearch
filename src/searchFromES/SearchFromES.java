@@ -10,7 +10,7 @@ import org.elasticsearch.search.SearchHits;
 
 public class SearchFromES {
 	  public static void queryWithString(String target,Client client){
-	    	SearchRequestBuilder responsebuilder = client.prepareSearch("es_t").setTypes("news");
+	    	SearchRequestBuilder responsebuilder = client.prepareSearch("crawler").setTypes("website");
 	    	SearchResponse myresponse=responsebuilder.setQuery(QueryBuilders.matchPhraseQuery("title", target))  
 	    			.setFrom(0).setSize(10).setExplain(true).execute().actionGet();  
 	    	SearchHits hits = myresponse.getHits();  

@@ -56,7 +56,8 @@ public class ElasticsearchTools {
 //		System.out.println("开始创建索引");
 //		client.admin().indices().prepareCreate("xxk").get();
 //		System.out.println("索引创建成功");
-		SearchFromES.multiQuery("", client);
+		SearchFromES.multiQuery("国家", client);
+		System.out.println("end");
 	}
 	/*** 
      *  获取search请求的结果，并输出打印结果信息 
