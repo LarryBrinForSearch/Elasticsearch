@@ -2,6 +2,7 @@ package searchFromES;
 
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.lucene.index.Terms;
 import org.apache.lucene.queryparser.flexible.core.builders.QueryBuilder;
@@ -9,6 +10,7 @@ import org.apache.lucene.search.spans.SpanNearQuery;
 import org.elasticsearch.action.search.SearchRequestBuilder;
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.client.Client;
+import org.elasticsearch.common.text.Text;
 import org.elasticsearch.index.mapper.object.ObjectMapper;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.search.SearchHit;
@@ -28,7 +30,6 @@ import org.elasticsearch.search.aggregations.metrics.cardinality.Cardinality;
 import org.elasticsearch.search.highlight.HighlightField;
 import org.joda.time.DateTime;
 
-import com.sun.javafx.collections.MappingChange.Map;
 import com.sun.xml.internal.bind.v2.runtime.unmarshaller.XsiNilLoader.Array;
 
 
@@ -263,90 +264,110 @@ public class SearchFromES {
 	    /*
 	     * 高亮显示
 	     */
-// public static void aggSearch3(Client client,String target,String channel_name){
-//	    	
-//	    	//查询条件
-//	    	String scondition=channel_name==null? "":channel_name;
-//	    	SearchRequestBuilder sbuilder = client.prepareSearch("lbsearch").setTypes("website");
-//	    	
-//	    	TermsBuilder teamAgg= AggregationBuilders.terms("count").field("channel_name").size(20);
-//	    	sbuilder.addAggregation(teamAgg);
-//	    	SearchResponse response=null;
-//	    	if(!"".equals(scondition)){
-//	    		response = sbuilder.setQuery(QueryBuilders.boolQuery() 
-//	    				.must(QueryBuilders.matchPhraseQuery("channel_name", scondition))
-//		        		.should(QueryBuilders.matchPhraseQuery("title", target))
-//		        		.should(QueryBuilders.matchPhraseQuery("content", target))
-//		        		.minimumShouldMatch("1"))
-//	    				.setSize(20)
-//	    				.addHighlightedField("title")
-//	    				.addHighlightedField("content")
-//	    				.setHighlighterPreTags("<span style=\"color:red\">")
-//	    				.setHighlighterPostTags("</span>")
-//	    				.setHighlighterPreTags("<em>")
-//	    				.setHighlighterPostTags("</em>")
-//		                //.addSort("category_id", SortOrder.ASC)   
-//		                .setExplain(true).execute().actionGet();  
-//	    	}
-//	    	else{
-//	    		response = sbuilder.setQuery(QueryBuilders.boolQuery() 
-//		        		.should(QueryBuilders.matchPhraseQuery("title", target))
-//		        		.should(QueryBuilders.matchPhraseQuery("content", target))
-//		        		.minimumShouldMatch("1"))
-//	    				.setSize(20)
-//		                //.addSort("category_id", SortOrder.ASC)   
-//		                .setExplain(true).execute().actionGet();  
-//	    	}
-//	    	//aggregation结果解析
-//	    	java.util.Map<String, Aggregation> aggMap = response.getAggregations().asMap();
-//
-//	    	System.out.println(aggMap.get("count").toString());
-//	    	
-//	    	StringTerms Aggteam= (StringTerms) aggMap.get("count");
-//	    	Iterator<org.elasticsearch.search.aggregations.bucket.terms.Terms.Bucket> teamBucketIt = Aggteam.getBuckets().iterator();
-//	    	
-//	    	int sum=0;
-//	    
-//	    	while (teamBucketIt .hasNext()) {
-//		    	org.elasticsearch.search.aggregations.bucket.terms.Terms.Bucket buck = teamBucketIt .next();
-//		    	//文章类型名
-//		    	String article = (String) buck.getKey();
-//		    	//记录数
-//		    	long counts = buck.getDocCount();
-//	//	    	//得到所有子聚合
-//	//	    	Map subaggmap = buck.getAggregations().asMap();
-//	//	    	//avg值获取方法
-//	//	    	double avg_age= ((InternalAvg) subaggmap.get("avg_age")).getValue();
-//	//	    	//sum值获取方法
-//	//	    	double total_salary = ((InternalSum) subaggmap.get("total_salary")).getValue();
-//	//	    	//...
-//	//	    	//max/min以此类推
-//		    	System.out.println("文章类型："+article+"\t"+"文章数量："+counts);
-//		    	sum+=counts;
-//	    	}
-//	    	System.out.println("**************************");
-//	    	SearchHits hits = response.getHits(); 
-//	    	SearchHit[] shits = hits.getHits();
-//	        
-//	    	for (int i = 0; i < hits.getHits().length; i++) {  
-//	    	           //System.out.println(hits.getHits()[i].getSourceAsString());
-//	    	           System.out.println(hits.getHits()[i].getSource().get("title"));
-//	    	           Map<String, HighlightField> result = (Map<String, HighlightField>) hits.getHits()[i].highlightFields();
-//	    	           
-//	    	           HighlightField titleField = result.map("title");
-//	    	           if (titleField !=null) {
-//	                       // 取得定义的高亮标签
-//	                       Text[] titleTexts = titleField.fragments();
-//	                       // 为title串值增加自定义的高亮标签
-//	                       String title = "";
-//	                       for (Text text : titleTexts) {
-//	                           title += text;
-//	                       }
-//	                       newsInfo.setTitle(title);
-//	                   }
-//	    	           
-//	    	           
-//	    	}  
-//	    	System.out.println(sum+"!");
-//	    }
+ public static void aggSearch3(Client client,String target,String channel_name){
+	    	
+	    	//查询条件
+	    	String scondition=channel_name==null? "":channel_name;
+	    	SearchRequestBuilder sbuilder = client.prepareSearch("lbsearch").setTypes("website");
+	    	
+	    	TermsBuilder teamAgg= AggregationBuilders.terms("count").field("channel_name").size(20);
+	    	sbuilder.addAggregation(teamAgg);
+	    	SearchResponse response=null;
+	    	if(!"".equals(scondition)){
+	    		response = sbuilder.setQuery(QueryBuilders.boolQuery() 
+	    				.must(QueryBuilders.matchPhraseQuery("channel_name", scondition))
+		        		.should(QueryBuilders.matchPhraseQuery("title", target))
+		        		.should(QueryBuilders.matchPhraseQuery("content", target))
+		        		.minimumShouldMatch("1"))
+	    				.setSize(20)
+	    				.addHighlightedField("title")
+	    				.addHighlightedField("content")
+	    				.setHighlighterPreTags("<span style=\"color:red\">")
+	    				.setHighlighterPostTags("</span>")
+	    				.setHighlighterPreTags("<em>")
+	    				.setHighlighterPostTags("</em>")
+		                //.addSort("category_id", SortOrder.ASC)   
+		                .setExplain(true).execute().actionGet();  
+	    	}
+	    	else{
+	    		response = sbuilder.setQuery(QueryBuilders.boolQuery() 
+		        		.should(QueryBuilders.matchPhraseQuery("title", target))
+		        		.should(QueryBuilders.matchPhraseQuery("content", target))
+		        		.minimumShouldMatch("1"))
+	    				.setSize(20)
+	    				.addHighlightedField("title")
+	    				.addHighlightedField("content")
+	    				.setHighlighterPreTags("<span style=\"color:red\">")
+	    				.setHighlighterPostTags("</span>")
+	    				
+		                //.addSort("category_id", SortOrder.ASC)   
+		                .setExplain(true).execute().actionGet();  
+	    	}
+	    	//aggregation结果解析
+	    	java.util.Map<String, Aggregation> aggMap = response.getAggregations().asMap();
+
+	    	System.out.println(aggMap.get("count").toString());
+	    	
+	    	StringTerms Aggteam= (StringTerms) aggMap.get("count");
+	    	Iterator<org.elasticsearch.search.aggregations.bucket.terms.Terms.Bucket> teamBucketIt = Aggteam.getBuckets().iterator();
+	    	
+	    	int sum=0;
+	    
+	    	while (teamBucketIt .hasNext()) {
+		    	org.elasticsearch.search.aggregations.bucket.terms.Terms.Bucket buck = teamBucketIt .next();
+		    	//文章类型名
+		    	String article = (String) buck.getKey();
+		    	//记录数
+		    	long counts = buck.getDocCount();
+	//	    	//得到所有子聚合
+	//	    	Map subaggmap = buck.getAggregations().asMap();
+	//	    	//avg值获取方法
+	//	    	double avg_age= ((InternalAvg) subaggmap.get("avg_age")).getValue();
+	//	    	//sum值获取方法
+	//	    	double total_salary = ((InternalSum) subaggmap.get("total_salary")).getValue();
+	//	    	//...
+	//	    	//max/min以此类推
+		    	System.out.println("文章类型："+article+"\t"+"文章数量："+counts);
+		    	sum+=counts;
+	    	}
+	    	System.out.println("**************************");
+	    	SearchHits hits = response.getHits();
+	    	SearchHit[] shits = hits.getHits();
+	        
+	    	for (int i = 0; i < hits.getHits().length; i++) {  
+	    	           //System.out.println(hits.getHits()[i].getSourceAsString());
+	    	      //     System.out.println(hits.getHits()[i].getSource().get("title"));
+	    		 SearchHit hit = shits[i];
+	    		 Map<String, HighlightField> result = hit.highlightFields();
+	    	            //System.out.println(result.size());
+	    	           HighlightField titleField = result.get("title");
+	    	          
+	    	           if (titleField !=null) {
+	    	        	   
+	                       // 取得定义的高亮标签
+	                       Text[] titleTexts = titleField.fragments();
+	                       // 为title串值增加自定义的高亮标签
+	                       String title = "";
+	                       for (Text text : titleTexts) {
+	                           title += text;
+	                       }
+	                     System.out.println(title); //newsInfo.setTitle();
+	                   }
+	    	           HighlightField contentField = result.get("content");
+		    	          
+	    	           if (contentField !=null) {
+	    	        	   
+	                       // 取得定义的高亮标签
+	                       Text[] contentTexts = contentField.fragments();
+	                       // 为title串值增加自定义的高亮标签
+	                       String content = "";
+	                       for (Text text : contentTexts) {
+	                    	   content += text;
+	                       }
+	                     System.out.println(content); //newsInfo.setTitle();
+	                   }
+	    	           
+	    	}  
+	    	System.out.println(sum+"!");
+	    }
 }
