@@ -366,7 +366,6 @@ public class SearchFromES {
 	                       }
 	                     System.out.println(content); //newsInfo.setTitle();
 	                   }
-	    	           
 	    	}  
 	    	System.out.println(sum+"!");
 	    }
