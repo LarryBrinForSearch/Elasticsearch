@@ -56,7 +56,7 @@ public class ElasticsearchTools {
 //		System.out.println("开始创建索引");
 //		client.admin().indices().prepareCreate("xxk").get();
 //		System.out.println("索引创建成功");
-		SearchFromES.aggSearch2(client,"山大","");
+		SearchFromES.aggSearch3(client,"山大","");
 		System.out.println("end");
 	}
 	
@@ -237,7 +237,4 @@ public class ElasticsearchTools {
         }  
         System.out.println("总数："+sum);  
     }  
-  
-  
-
 }
