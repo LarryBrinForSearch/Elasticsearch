@@ -3463,3 +3463,2477 @@ wlan12
  
 2017-07-07 09:03:12,247	DEBUG	[org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:931)]	[Frank Simpson] connected to node [{node-4}{Ys9iMtERRceJpEBMAaKbNQ}{192.168.0.17}{117.78.37.177:9300}]
  
+2017-07-07 10:08:22,317	INFO	[org.elasticsearch.plugins.PluginsService.<init>(PluginsService.java:180)]	[Super-Nova] modules [], plugins [], sites []
+ 
+2017-07-07 10:08:22,333	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Super-Nova] creating thread_pool [force_merge], type [fixed], size [1], queue_size [null]
+ 
+2017-07-07 10:08:22,348	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Super-Nova] creating thread_pool [percolate], type [fixed], size [4], queue_size [1k]
+ 
+2017-07-07 10:08:22,364	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:524)]	[Super-Nova] creating thread_pool [fetch_shard_started], type [scaling], min [1], size [8], keep_alive [5m]
+ 
+2017-07-07 10:08:22,364	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Super-Nova] creating thread_pool [listener], type [fixed], size [2], queue_size [null]
+ 
+2017-07-07 10:08:22,364	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Super-Nova] creating thread_pool [index], type [fixed], size [4], queue_size [200]
+ 
+2017-07-07 10:08:22,364	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:524)]	[Super-Nova] creating thread_pool [refresh], type [scaling], min [1], size [2], keep_alive [5m]
+ 
+2017-07-07 10:08:22,364	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Super-Nova] creating thread_pool [suggest], type [fixed], size [4], queue_size [1k]
+ 
+2017-07-07 10:08:22,364	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:445)]	[Super-Nova] creating thread_pool [generic], type [cached], keep_alive [30s]
+ 
+2017-07-07 10:08:22,364	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:524)]	[Super-Nova] creating thread_pool [warmer], type [scaling], min [1], size [2], keep_alive [5m]
+ 
+2017-07-07 10:08:22,364	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Super-Nova] creating thread_pool [search], type [fixed], size [7], queue_size [1k]
+ 
+2017-07-07 10:08:22,364	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:524)]	[Super-Nova] creating thread_pool [flush], type [scaling], min [1], size [2], keep_alive [5m]
+ 
+2017-07-07 10:08:22,364	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:524)]	[Super-Nova] creating thread_pool [fetch_shard_store], type [scaling], min [1], size [8], keep_alive [5m]
+ 
+2017-07-07 10:08:22,364	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:524)]	[Super-Nova] creating thread_pool [management], type [scaling], min [1], size [5], keep_alive [5m]
+ 
+2017-07-07 10:08:22,364	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Super-Nova] creating thread_pool [get], type [fixed], size [4], queue_size [1k]
+ 
+2017-07-07 10:08:22,364	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Super-Nova] creating thread_pool [bulk], type [fixed], size [4], queue_size [50]
+ 
+2017-07-07 10:08:22,364	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:524)]	[Super-Nova] creating thread_pool [snapshot], type [scaling], min [1], size [2], keep_alive [5m]
+ 
+2017-07-07 10:08:23,690	DEBUG	[org.elasticsearch.common.network.IfConfig.doLogging(IfConfig.java:107)]	configuration:
+
+lo
+        Software Loopback Interface 1
+        inet 127.0.0.1 netmask:255.0.0.0 broadcast:127.255.255.255 scope:host
+        inet6 ::1 prefixlen:128 scope:host
+        UP MULTICAST LOOPBACK mtu:-1 index:1
+
+net0
+        WAN Miniport (SSTP)
+        MULTICAST mtu:-1 index:2
+
+net1
+        WAN Miniport (IKEv2)
+        MULTICAST mtu:-1 index:3
+
+net2
+        WAN Miniport (L2TP)
+        MULTICAST mtu:-1 index:4
+
+net3
+        WAN Miniport (PPTP)
+        MULTICAST mtu:-1 index:5
+
+ppp0
+        WAN Miniport (PPPOE)
+        MULTICAST mtu:-1 index:6
+
+eth0
+        WAN Miniport (IPv6)
+        MULTICAST mtu:-1 index:7
+
+eth1
+        WAN Miniport (Network Monitor)
+        MULTICAST mtu:-1 index:8
+
+eth2
+        WAN Miniport (IP)
+        MULTICAST mtu:-1 index:9
+
+ppp1
+        RAS Async Adapter
+        MULTICAST mtu:-1 index:10
+
+net4
+        Bluetooth 
+        MULTICAST mtu:-1 index:11
+
+eth3
+        Bluetooth 
+        inet6 fe80::3c4c:f6a:8c09:60f1 prefixlen:64 scope:link
+        hardware B8:EE:65:A1:C1:36
+        MULTICAST mtu:1500 index:12
+
+eth4
+        VMware Virtual Ethernet Adapter for VMnet1
+        inet 192.168.206.1 netmask:255.255.255.0 broadcast:192.168.206.255 scope:site
+        inet6 fe80::1d5d:1a62:e549:fdfd prefixlen:64 scope:link
+        hardware 00:50:56:C0:00:01
+        UP MULTICAST mtu:1500 index:13
+
+eth5
+        VMware Virtual Ethernet Adapter for VMnet8
+        inet 192.168.112.1 netmask:255.255.255.0 broadcast:192.168.112.255 scope:site
+        inet6 fe80::50e:ba73:6410:3412 prefixlen:64 scope:link
+        hardware 00:50:56:C0:00:08
+        UP MULTICAST mtu:1500 index:14
+
+eth6
+        Qualcomm Atheros AR8162/8166/8168 PCI-E Fast Ethernet Controller (NDIS 6.20)
+        inet 211.87.229.88 netmask:255.255.255.0 broadcast:211.87.229.255
+        inet6 2001:da8:7001:4002:5055:34d6:1a54:e36e prefixlen:64
+        inet6 2001:da8:7001:4002:4d2a:aa90:46ca:192 prefixlen:128
+        inet6 fe80::5055:34d6:1a54:e36e prefixlen:128 scope:link
+        hardware F0:76:1C:56:7A:F0
+        UP MULTICAST mtu:1500 index:15
+
+wlan0
+        Qualcomm Atheros AR9485WB-EG Wireless Network Adapter
+        inet6 fe80::1829:3f66:3f1e:faac prefixlen:64 scope:link
+        hardware B8:EE:65:A1:83:42
+        MULTICAST mtu:1500 index:16
+
+net5
+        Microsoft 6to4 Adapter
+        MULTICAST mtu:-1 index:17
+
+net6
+        Teredo Tunneling Pseudo-Interface
+        inet6 fe80::100:7f:fffe prefixlen:64 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:18
+
+net7
+        Microsoft 6to4 Adapter #2
+        MULTICAST mtu:-1 index:19
+
+net8
+        Microsoft 6to4 Adapter #3
+        MULTICAST mtu:-1 index:20
+
+net9
+        Microsoft 6to4 Adapter #4
+        MULTICAST mtu:-1 index:21
+
+net10
+        Microsoft ISATAP Adapter #3
+        inet6 fe80::5efe:c0a8:7001 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:22
+
+net11
+        Microsoft ISATAP Adapter #2
+        inet6 fe80::5efe:c0a8:ce01 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:23
+
+net12
+        Microsoft 6to4 Adapter #5
+        MULTICAST mtu:-1 index:24
+
+net13
+        Microsoft 6to4 Adapter #6
+        MULTICAST mtu:-1 index:25
+
+net14
+        Microsoft ISATAP Adapter #4
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:26
+
+net15
+        Microsoft ISATAP Adapter #5
+        inet6 fe80::5efe:c0a8:1701 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:27
+
+wlan1
+        Microsoft Virtual WiFi Miniport Adapter
+        inet 192.168.23.1 netmask:255.255.255.0 broadcast:192.168.23.255 scope:site
+        inet6 fe80::d883:8319:26d:20ac prefixlen:64 scope:link
+        hardware 2A:EE:65:A1:83:42
+        UP MULTICAST mtu:1500 index:28
+
+net16
+        Microsoft ISATAP Adapter #6
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:29
+
+net17
+        Microsoft 6to4 Adapter #7
+        MULTICAST mtu:-1 index:30
+
+net18
+        Microsoft ISATAP Adapter
+        inet6 fe80::200:5efe:d357:e558 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:31
+
+wlan2
+        Qualcomm Atheros AR9485WB-EG Wireless Network Adapter-Virtual WiFi Filter Driver-0000
+        MULTICAST mtu:-1 index:32
+
+wlan3
+        Qualcomm Atheros AR9485WB-EG Wireless Network Adapter-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:33
+
+eth7
+        Qualcomm Atheros AR8162/8166/8168 PCI-E Fast Ethernet Controller (NDIS 6.20)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:34
+
+eth8
+        Qualcomm Atheros AR8162/8166/8168 PCI-E Fast Ethernet Controller (NDIS 6.20)-WFP LightWeight Filter-0000
+        MULTICAST mtu:-1 index:35
+
+eth9
+        WAN Miniport (Network Monitor)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:36
+
+eth10
+        WAN Miniport (IP)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:37
+
+eth11
+        WAN Miniport (IPv6)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:38
+
+wlan4
+        Qualcomm Atheros AR9485WB-EG Wireless Network Adapter-Native WiFi Filter Driver-0000
+        MULTICAST mtu:-1 index:39
+
+wlan5
+        Qualcomm Atheros AR9485WB-EG Wireless Network Adapter-WFP LightWeight Filter-0000
+        MULTICAST mtu:-1 index:40
+
+wlan6
+        Microsoft Virtual WiFi Miniport Adapter-Native WiFi Filter Driver-0000
+        MULTICAST mtu:-1 index:41
+
+wlan7
+        Microsoft Virtual WiFi Miniport Adapter-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:42
+
+wlan8
+        Microsoft Virtual WiFi Miniport Adapter-WFP LightWeight Filter-0000
+        MULTICAST mtu:-1 index:43
+
+ 
+2017-07-07 10:08:23,877	DEBUG	[org.elasticsearch.common.netty.NettyUtils.<clinit>(NettyUtils.java:104)]	using gathering [true]
+ 
+2017-07-07 10:08:23,908	DEBUG	[org.elasticsearch.client.transport.TransportClientNodesService.<init>(TransportClientNodesService.java:120)]	[Super-Nova] node_sampler_interval[5s]
+ 
+2017-07-07 10:08:23,924	DEBUG	[org.elasticsearch.transport.netty.NettyInternalESLogger.debug(NettyInternalESLogger.java:58)]	Using select timeout of 500
+ 
+2017-07-07 10:08:23,924	DEBUG	[org.elasticsearch.transport.netty.NettyInternalESLogger.debug(NettyInternalESLogger.java:58)]	Epoll-bug workaround enabled = false
+ 
+2017-07-07 10:08:24,049	DEBUG	[org.elasticsearch.client.transport.TransportClientNodesService.addTransportAddresses(TransportClientNodesService.java:177)]	[Super-Nova] adding address [{#transport#-1}{117.78.37.208}{117.78.37.208:9300}]
+ 
+2017-07-07 10:08:24,096	DEBUG	[org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:931)]	[Super-Nova] connected to node [{#transport#-1}{117.78.37.208}{117.78.37.208:9300}]
+ 
+2017-07-07 10:08:24,174	DEBUG	[org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:931)]	[Super-Nova] connected to node [{node-1}{ZoTdllM7TvyMI1VOIaxhWQ}{192.168.0.10}{117.78.37.208:9300}]
+ 
+2017-07-07 10:08:24,174	DEBUG	[org.elasticsearch.client.transport.TransportClientNodesService.addTransportAddresses(TransportClientNodesService.java:177)]	[Super-Nova] adding address [{#transport#-2}{117.78.37.224}{117.78.37.224:9300}]
+ 
+2017-07-07 10:08:25,328	DEBUG	[org.elasticsearch.client.transport.TransportClientNodesService$SimpleNodeSampler.doSample(TransportClientNodesService.java:356)]	[Super-Nova] failed to connect to node [{#transport#-2}{117.78.37.224}{117.78.37.224:9300}], removed from nodes list
+ ConnectTransportException[[][117.78.37.224:9300] connect_timeout[30s]]; nested: ConnectException[Connection refused: no further information: /117.78.37.224:9300];
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannelsLight(NettyTransport.java:952)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:916)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNodeLight(NettyTransport.java:888)
+	at org.elasticsearch.transport.TransportService.connectToNodeLight(TransportService.java:267)
+	at org.elasticsearch.client.transport.TransportClientNodesService$SimpleNodeSampler.doSample(TransportClientNodesService.java:354)
+	at org.elasticsearch.client.transport.TransportClientNodesService$NodeSampler.sample(TransportClientNodesService.java:300)
+	at org.elasticsearch.client.transport.TransportClientNodesService.addTransportAddresses(TransportClientNodesService.java:181)
+	at org.elasticsearch.client.transport.TransportClient.addTransportAddress(TransportClient.java:236)
+	at connectES.ElasticsearchTools.<clinit>(ElasticsearchTools.java:44)
+Caused by: java.net.ConnectException: Connection refused: no further information: /117.78.37.224:9300
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(Unknown Source)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:152)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:105)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:79)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+2017-07-07 10:08:25,375	DEBUG	[org.elasticsearch.client.transport.TransportClientNodesService.addTransportAddresses(TransportClientNodesService.java:177)]	[Super-Nova] adding address [{#transport#-3}{117.78.37.196}{117.78.37.196:9300}]
+ 
+2017-07-07 10:08:26,484	DEBUG	[org.elasticsearch.client.transport.TransportClientNodesService$SimpleNodeSampler.doSample(TransportClientNodesService.java:356)]	[Super-Nova] failed to connect to node [{#transport#-2}{117.78.37.224}{117.78.37.224:9300}], removed from nodes list
+ ConnectTransportException[[][117.78.37.224:9300] connect_timeout[30s]]; nested: ConnectException[Connection refused: no further information: /117.78.37.224:9300];
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannelsLight(NettyTransport.java:952)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:916)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNodeLight(NettyTransport.java:888)
+	at org.elasticsearch.transport.TransportService.connectToNodeLight(TransportService.java:267)
+	at org.elasticsearch.client.transport.TransportClientNodesService$SimpleNodeSampler.doSample(TransportClientNodesService.java:354)
+	at org.elasticsearch.client.transport.TransportClientNodesService$NodeSampler.sample(TransportClientNodesService.java:300)
+	at org.elasticsearch.client.transport.TransportClientNodesService.addTransportAddresses(TransportClientNodesService.java:181)
+	at org.elasticsearch.client.transport.TransportClient.addTransportAddress(TransportClient.java:236)
+	at connectES.ElasticsearchTools.<clinit>(ElasticsearchTools.java:45)
+Caused by: java.net.ConnectException: Connection refused: no further information: /117.78.37.224:9300
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(Unknown Source)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:152)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:105)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:79)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+2017-07-07 10:08:26,516	DEBUG	[org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:931)]	[Super-Nova] connected to node [{#transport#-3}{117.78.37.196}{117.78.37.196:9300}]
+ 
+2017-07-07 10:08:26,656	DEBUG	[org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:931)]	[Super-Nova] connected to node [{node-3}{pSmPNgoFQE2zNCwoTzDTUQ}{192.168.0.9}{117.78.37.196:9300}]
+ 
+2017-07-07 10:08:26,656	DEBUG	[org.elasticsearch.client.transport.TransportClientNodesService.addTransportAddresses(TransportClientNodesService.java:177)]	[Super-Nova] adding address [{#transport#-4}{117.78.37.177}{117.78.37.177:9300}]
+ 
+2017-07-07 10:08:27,764	DEBUG	[org.elasticsearch.client.transport.TransportClientNodesService$SimpleNodeSampler.doSample(TransportClientNodesService.java:356)]	[Super-Nova] failed to connect to node [{#transport#-2}{117.78.37.224}{117.78.37.224:9300}], removed from nodes list
+ ConnectTransportException[[][117.78.37.224:9300] connect_timeout[30s]]; nested: ConnectException[Connection refused: no further information: /117.78.37.224:9300];
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannelsLight(NettyTransport.java:952)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:916)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNodeLight(NettyTransport.java:888)
+	at org.elasticsearch.transport.TransportService.connectToNodeLight(TransportService.java:267)
+	at org.elasticsearch.client.transport.TransportClientNodesService$SimpleNodeSampler.doSample(TransportClientNodesService.java:354)
+	at org.elasticsearch.client.transport.TransportClientNodesService$NodeSampler.sample(TransportClientNodesService.java:300)
+	at org.elasticsearch.client.transport.TransportClientNodesService.addTransportAddresses(TransportClientNodesService.java:181)
+	at org.elasticsearch.client.transport.TransportClient.addTransportAddress(TransportClient.java:236)
+	at connectES.ElasticsearchTools.<clinit>(ElasticsearchTools.java:46)
+Caused by: java.net.ConnectException: Connection refused: no further information: /117.78.37.224:9300
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(Unknown Source)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:152)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:105)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:79)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+2017-07-07 10:08:27,826	DEBUG	[org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:931)]	[Super-Nova] connected to node [{#transport#-4}{117.78.37.177}{117.78.37.177:9300}]
+ 
+2017-07-07 10:08:27,873	DEBUG	[org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:931)]	[Super-Nova] connected to node [{node-4}{Ys9iMtERRceJpEBMAaKbNQ}{192.168.0.17}{117.78.37.177:9300}]
+ 
+2017-07-07 10:37:28,074	INFO	[org.elasticsearch.plugins.PluginsService.<init>(PluginsService.java:180)]	[Martin Gold] modules [], plugins [], sites []
+ 
+2017-07-07 10:37:28,121	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Martin Gold] creating thread_pool [force_merge], type [fixed], size [1], queue_size [null]
+ 
+2017-07-07 10:37:28,136	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Martin Gold] creating thread_pool [percolate], type [fixed], size [4], queue_size [1k]
+ 
+2017-07-07 10:37:28,152	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:524)]	[Martin Gold] creating thread_pool [fetch_shard_started], type [scaling], min [1], size [8], keep_alive [5m]
+ 
+2017-07-07 10:37:28,152	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Martin Gold] creating thread_pool [listener], type [fixed], size [2], queue_size [null]
+ 
+2017-07-07 10:37:28,152	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Martin Gold] creating thread_pool [index], type [fixed], size [4], queue_size [200]
+ 
+2017-07-07 10:37:28,152	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:524)]	[Martin Gold] creating thread_pool [refresh], type [scaling], min [1], size [2], keep_alive [5m]
+ 
+2017-07-07 10:37:28,152	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Martin Gold] creating thread_pool [suggest], type [fixed], size [4], queue_size [1k]
+ 
+2017-07-07 10:37:28,152	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:445)]	[Martin Gold] creating thread_pool [generic], type [cached], keep_alive [30s]
+ 
+2017-07-07 10:37:28,152	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:524)]	[Martin Gold] creating thread_pool [warmer], type [scaling], min [1], size [2], keep_alive [5m]
+ 
+2017-07-07 10:37:28,152	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Martin Gold] creating thread_pool [search], type [fixed], size [7], queue_size [1k]
+ 
+2017-07-07 10:37:28,152	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:524)]	[Martin Gold] creating thread_pool [flush], type [scaling], min [1], size [2], keep_alive [5m]
+ 
+2017-07-07 10:37:28,152	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:524)]	[Martin Gold] creating thread_pool [fetch_shard_store], type [scaling], min [1], size [8], keep_alive [5m]
+ 
+2017-07-07 10:37:28,152	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:524)]	[Martin Gold] creating thread_pool [management], type [scaling], min [1], size [5], keep_alive [5m]
+ 
+2017-07-07 10:37:28,152	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Martin Gold] creating thread_pool [get], type [fixed], size [4], queue_size [1k]
+ 
+2017-07-07 10:37:28,152	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Martin Gold] creating thread_pool [bulk], type [fixed], size [4], queue_size [50]
+ 
+2017-07-07 10:37:28,152	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:524)]	[Martin Gold] creating thread_pool [snapshot], type [scaling], min [1], size [2], keep_alive [5m]
+ 
+2017-07-07 10:37:29,197	DEBUG	[org.elasticsearch.common.network.IfConfig.doLogging(IfConfig.java:107)]	configuration:
+
+lo
+        Software Loopback Interface 1
+        inet 127.0.0.1 netmask:255.0.0.0 broadcast:127.255.255.255 scope:host
+        inet6 ::1 prefixlen:128 scope:host
+        UP MULTICAST LOOPBACK mtu:-1 index:1
+
+net0
+        WAN Miniport (SSTP)
+        MULTICAST mtu:-1 index:2
+
+net1
+        WAN Miniport (IKEv2)
+        MULTICAST mtu:-1 index:3
+
+net2
+        WAN Miniport (L2TP)
+        MULTICAST mtu:-1 index:4
+
+net3
+        WAN Miniport (PPTP)
+        MULTICAST mtu:-1 index:5
+
+ppp0
+        WAN Miniport (PPPOE)
+        MULTICAST mtu:-1 index:6
+
+eth0
+        WAN Miniport (IPv6)
+        MULTICAST mtu:-1 index:7
+
+eth1
+        WAN Miniport (Network Monitor)
+        MULTICAST mtu:-1 index:8
+
+eth2
+        WAN Miniport (IP)
+        MULTICAST mtu:-1 index:9
+
+ppp1
+        RAS Async Adapter
+        MULTICAST mtu:-1 index:10
+
+net4
+        Bluetooth 
+        MULTICAST mtu:-1 index:11
+
+eth3
+        Bluetooth 
+        inet6 fe80::3c4c:f6a:8c09:60f1 prefixlen:64 scope:link
+        hardware B8:EE:65:A1:C1:36
+        MULTICAST mtu:1500 index:12
+
+eth4
+        VMware Virtual Ethernet Adapter for VMnet1
+        inet 192.168.206.1 netmask:255.255.255.0 broadcast:192.168.206.255 scope:site
+        inet6 fe80::1d5d:1a62:e549:fdfd prefixlen:64 scope:link
+        hardware 00:50:56:C0:00:01
+        UP MULTICAST mtu:1500 index:13
+
+eth5
+        VMware Virtual Ethernet Adapter for VMnet8
+        inet 192.168.112.1 netmask:255.255.255.0 broadcast:192.168.112.255 scope:site
+        inet6 fe80::50e:ba73:6410:3412 prefixlen:64 scope:link
+        hardware 00:50:56:C0:00:08
+        UP MULTICAST mtu:1500 index:14
+
+eth6
+        Qualcomm Atheros AR8162/8166/8168 PCI-E Fast Ethernet Controller (NDIS 6.20)
+        inet 211.87.229.88 netmask:255.255.255.0 broadcast:211.87.229.255
+        inet6 2001:da8:7001:4002:5055:34d6:1a54:e36e prefixlen:64
+        inet6 2001:da8:7001:4002:4d2a:aa90:46ca:192 prefixlen:128
+        inet6 fe80::5055:34d6:1a54:e36e prefixlen:128 scope:link
+        hardware F0:76:1C:56:7A:F0
+        UP MULTICAST mtu:1500 index:15
+
+wlan0
+        Qualcomm Atheros AR9485WB-EG Wireless Network Adapter
+        inet6 fe80::1829:3f66:3f1e:faac prefixlen:64 scope:link
+        hardware B8:EE:65:A1:83:42
+        MULTICAST mtu:1500 index:16
+
+net5
+        Microsoft 6to4 Adapter
+        MULTICAST mtu:-1 index:17
+
+net6
+        Teredo Tunneling Pseudo-Interface
+        inet6 fe80::100:7f:fffe prefixlen:64 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:18
+
+net7
+        Microsoft 6to4 Adapter #2
+        MULTICAST mtu:-1 index:19
+
+net8
+        Microsoft 6to4 Adapter #3
+        MULTICAST mtu:-1 index:20
+
+net9
+        Microsoft 6to4 Adapter #4
+        MULTICAST mtu:-1 index:21
+
+net10
+        Microsoft ISATAP Adapter #3
+        inet6 fe80::5efe:c0a8:7001 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:22
+
+net11
+        Microsoft ISATAP Adapter #2
+        inet6 fe80::5efe:c0a8:ce01 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:23
+
+net12
+        Microsoft 6to4 Adapter #5
+        MULTICAST mtu:-1 index:24
+
+net13
+        Microsoft 6to4 Adapter #6
+        MULTICAST mtu:-1 index:25
+
+net14
+        Microsoft ISATAP Adapter #4
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:26
+
+net15
+        Microsoft ISATAP Adapter #5
+        inet6 fe80::5efe:c0a8:1701 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:27
+
+wlan1
+        Microsoft Virtual WiFi Miniport Adapter
+        inet 192.168.23.1 netmask:255.255.255.0 broadcast:192.168.23.255 scope:site
+        inet6 fe80::d883:8319:26d:20ac prefixlen:64 scope:link
+        hardware 2A:EE:65:A1:83:42
+        UP MULTICAST mtu:1500 index:28
+
+net16
+        Microsoft ISATAP Adapter #6
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:29
+
+net17
+        Microsoft 6to4 Adapter #7
+        MULTICAST mtu:-1 index:30
+
+net18
+        Microsoft ISATAP Adapter
+        inet6 fe80::200:5efe:d357:e558 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:31
+
+wlan2
+        Qualcomm Atheros AR9485WB-EG Wireless Network Adapter-Virtual WiFi Filter Driver-0000
+        MULTICAST mtu:-1 index:32
+
+wlan3
+        Qualcomm Atheros AR9485WB-EG Wireless Network Adapter-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:33
+
+eth7
+        Qualcomm Atheros AR8162/8166/8168 PCI-E Fast Ethernet Controller (NDIS 6.20)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:34
+
+eth8
+        Qualcomm Atheros AR8162/8166/8168 PCI-E Fast Ethernet Controller (NDIS 6.20)-WFP LightWeight Filter-0000
+        MULTICAST mtu:-1 index:35
+
+eth9
+        WAN Miniport (Network Monitor)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:36
+
+eth10
+        WAN Miniport (IP)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:37
+
+eth11
+        WAN Miniport (IPv6)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:38
+
+wlan4
+        Qualcomm Atheros AR9485WB-EG Wireless Network Adapter-Native WiFi Filter Driver-0000
+        MULTICAST mtu:-1 index:39
+
+wlan5
+        Qualcomm Atheros AR9485WB-EG Wireless Network Adapter-WFP LightWeight Filter-0000
+        MULTICAST mtu:-1 index:40
+
+wlan6
+        Microsoft Virtual WiFi Miniport Adapter-Native WiFi Filter Driver-0000
+        MULTICAST mtu:-1 index:41
+
+wlan7
+        Microsoft Virtual WiFi Miniport Adapter-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:42
+
+wlan8
+        Microsoft Virtual WiFi Miniport Adapter-WFP LightWeight Filter-0000
+        MULTICAST mtu:-1 index:43
+
+ 
+2017-07-07 10:37:29,213	DEBUG	[org.elasticsearch.common.netty.NettyUtils.<clinit>(NettyUtils.java:104)]	using gathering [true]
+ 
+2017-07-07 10:37:29,244	DEBUG	[org.elasticsearch.client.transport.TransportClientNodesService.<init>(TransportClientNodesService.java:120)]	[Martin Gold] node_sampler_interval[5s]
+ 
+2017-07-07 10:37:29,244	DEBUG	[org.elasticsearch.transport.netty.NettyInternalESLogger.debug(NettyInternalESLogger.java:58)]	Using select timeout of 500
+ 
+2017-07-07 10:37:29,260	DEBUG	[org.elasticsearch.transport.netty.NettyInternalESLogger.debug(NettyInternalESLogger.java:58)]	Epoll-bug workaround enabled = false
+ 
+2017-07-07 10:37:29,384	DEBUG	[org.elasticsearch.client.transport.TransportClientNodesService.addTransportAddresses(TransportClientNodesService.java:177)]	[Martin Gold] adding address [{#transport#-1}{117.78.37.208}{117.78.37.208:9300}]
+ 
+2017-07-07 10:37:29,431	DEBUG	[org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:931)]	[Martin Gold] connected to node [{#transport#-1}{117.78.37.208}{117.78.37.208:9300}]
+ 
+2017-07-07 10:37:29,509	DEBUG	[org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:931)]	[Martin Gold] connected to node [{node-1}{ZoTdllM7TvyMI1VOIaxhWQ}{192.168.0.10}{117.78.37.208:9300}]
+ 
+2017-07-07 10:37:29,509	DEBUG	[org.elasticsearch.client.transport.TransportClientNodesService.addTransportAddresses(TransportClientNodesService.java:177)]	[Martin Gold] adding address [{#transport#-2}{117.78.37.224}{117.78.37.224:9300}]
+ 
+2017-07-07 10:37:29,556	DEBUG	[org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:931)]	[Martin Gold] connected to node [{#transport#-2}{117.78.37.224}{117.78.37.224:9300}]
+ 
+2017-07-07 10:37:29,712	DEBUG	[org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:931)]	[Martin Gold] connected to node [{node-2}{tNVAey7SSPW8ZIPck877fA}{192.168.0.7}{117.78.37.224:9300}]
+ 
+2017-07-07 10:37:29,712	DEBUG	[org.elasticsearch.client.transport.TransportClientNodesService.addTransportAddresses(TransportClientNodesService.java:177)]	[Martin Gold] adding address [{#transport#-3}{117.78.37.196}{117.78.37.196:9300}]
+ 
+2017-07-07 10:37:29,790	DEBUG	[org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:931)]	[Martin Gold] connected to node [{#transport#-3}{117.78.37.196}{117.78.37.196:9300}]
+ 
+2017-07-07 10:37:29,852	DEBUG	[org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:931)]	[Martin Gold] connected to node [{node-3}{pSmPNgoFQE2zNCwoTzDTUQ}{192.168.0.9}{117.78.37.196:9300}]
+ 
+2017-07-07 10:37:29,852	DEBUG	[org.elasticsearch.client.transport.TransportClientNodesService.addTransportAddresses(TransportClientNodesService.java:177)]	[Martin Gold] adding address [{#transport#-4}{117.78.37.177}{117.78.37.177:9300}]
+ 
+2017-07-07 10:37:29,946	DEBUG	[org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:931)]	[Martin Gold] connected to node [{#transport#-4}{117.78.37.177}{117.78.37.177:9300}]
+ 
+2017-07-07 10:37:30,024	DEBUG	[org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:931)]	[Martin Gold] connected to node [{node-4}{Ys9iMtERRceJpEBMAaKbNQ}{192.168.0.17}{117.78.37.177:9300}]
+ 
+2017-07-07 10:38:48,274	INFO	[org.elasticsearch.plugins.PluginsService.<init>(PluginsService.java:180)]	[Samuel Smithers] modules [], plugins [], sites []
+ 
+2017-07-07 10:38:48,290	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Samuel Smithers] creating thread_pool [force_merge], type [fixed], size [1], queue_size [null]
+ 
+2017-07-07 10:38:48,306	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Samuel Smithers] creating thread_pool [percolate], type [fixed], size [4], queue_size [1k]
+ 
+2017-07-07 10:38:48,321	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:524)]	[Samuel Smithers] creating thread_pool [fetch_shard_started], type [scaling], min [1], size [8], keep_alive [5m]
+ 
+2017-07-07 10:38:48,321	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Samuel Smithers] creating thread_pool [listener], type [fixed], size [2], queue_size [null]
+ 
+2017-07-07 10:38:48,321	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Samuel Smithers] creating thread_pool [index], type [fixed], size [4], queue_size [200]
+ 
+2017-07-07 10:38:48,321	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:524)]	[Samuel Smithers] creating thread_pool [refresh], type [scaling], min [1], size [2], keep_alive [5m]
+ 
+2017-07-07 10:38:48,321	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Samuel Smithers] creating thread_pool [suggest], type [fixed], size [4], queue_size [1k]
+ 
+2017-07-07 10:38:48,321	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:445)]	[Samuel Smithers] creating thread_pool [generic], type [cached], keep_alive [30s]
+ 
+2017-07-07 10:38:48,321	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:524)]	[Samuel Smithers] creating thread_pool [warmer], type [scaling], min [1], size [2], keep_alive [5m]
+ 
+2017-07-07 10:38:48,321	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Samuel Smithers] creating thread_pool [search], type [fixed], size [7], queue_size [1k]
+ 
+2017-07-07 10:38:48,321	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:524)]	[Samuel Smithers] creating thread_pool [flush], type [scaling], min [1], size [2], keep_alive [5m]
+ 
+2017-07-07 10:38:48,321	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:524)]	[Samuel Smithers] creating thread_pool [fetch_shard_store], type [scaling], min [1], size [8], keep_alive [5m]
+ 
+2017-07-07 10:38:48,321	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:524)]	[Samuel Smithers] creating thread_pool [management], type [scaling], min [1], size [5], keep_alive [5m]
+ 
+2017-07-07 10:38:48,321	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Samuel Smithers] creating thread_pool [get], type [fixed], size [4], queue_size [1k]
+ 
+2017-07-07 10:38:48,321	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Samuel Smithers] creating thread_pool [bulk], type [fixed], size [4], queue_size [50]
+ 
+2017-07-07 10:38:48,337	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:524)]	[Samuel Smithers] creating thread_pool [snapshot], type [scaling], min [1], size [2], keep_alive [5m]
+ 
+2017-07-07 10:38:49,569	DEBUG	[org.elasticsearch.common.network.IfConfig.doLogging(IfConfig.java:107)]	configuration:
+
+lo
+        Software Loopback Interface 1
+        inet 127.0.0.1 netmask:255.0.0.0 broadcast:127.255.255.255 scope:host
+        inet6 ::1 prefixlen:128 scope:host
+        UP MULTICAST LOOPBACK mtu:-1 index:1
+
+net0
+        WAN Miniport (SSTP)
+        MULTICAST mtu:-1 index:2
+
+net1
+        WAN Miniport (IKEv2)
+        MULTICAST mtu:-1 index:3
+
+net2
+        WAN Miniport (L2TP)
+        MULTICAST mtu:-1 index:4
+
+net3
+        WAN Miniport (PPTP)
+        MULTICAST mtu:-1 index:5
+
+ppp0
+        WAN Miniport (PPPOE)
+        MULTICAST mtu:-1 index:6
+
+eth0
+        WAN Miniport (IPv6)
+        MULTICAST mtu:-1 index:7
+
+eth1
+        WAN Miniport (Network Monitor)
+        MULTICAST mtu:-1 index:8
+
+eth2
+        WAN Miniport (IP)
+        MULTICAST mtu:-1 index:9
+
+ppp1
+        RAS Async Adapter
+        MULTICAST mtu:-1 index:10
+
+net4
+        Bluetooth 
+        MULTICAST mtu:-1 index:11
+
+eth3
+        Bluetooth 
+        inet6 fe80::3c4c:f6a:8c09:60f1 prefixlen:64 scope:link
+        hardware B8:EE:65:A1:C1:36
+        MULTICAST mtu:1500 index:12
+
+eth4
+        VMware Virtual Ethernet Adapter for VMnet1
+        inet 192.168.206.1 netmask:255.255.255.0 broadcast:192.168.206.255 scope:site
+        inet6 fe80::1d5d:1a62:e549:fdfd prefixlen:64 scope:link
+        hardware 00:50:56:C0:00:01
+        UP MULTICAST mtu:1500 index:13
+
+eth5
+        VMware Virtual Ethernet Adapter for VMnet8
+        inet 192.168.112.1 netmask:255.255.255.0 broadcast:192.168.112.255 scope:site
+        inet6 fe80::50e:ba73:6410:3412 prefixlen:64 scope:link
+        hardware 00:50:56:C0:00:08
+        UP MULTICAST mtu:1500 index:14
+
+eth6
+        Qualcomm Atheros AR8162/8166/8168 PCI-E Fast Ethernet Controller (NDIS 6.20)
+        inet 211.87.229.88 netmask:255.255.255.0 broadcast:211.87.229.255
+        inet6 2001:da8:7001:4002:5055:34d6:1a54:e36e prefixlen:64
+        inet6 2001:da8:7001:4002:4d2a:aa90:46ca:192 prefixlen:128
+        inet6 fe80::5055:34d6:1a54:e36e prefixlen:128 scope:link
+        hardware F0:76:1C:56:7A:F0
+        UP MULTICAST mtu:1500 index:15
+
+wlan0
+        Qualcomm Atheros AR9485WB-EG Wireless Network Adapter
+        inet6 fe80::1829:3f66:3f1e:faac prefixlen:64 scope:link
+        hardware B8:EE:65:A1:83:42
+        MULTICAST mtu:1500 index:16
+
+net5
+        Microsoft 6to4 Adapter
+        MULTICAST mtu:-1 index:17
+
+net6
+        Teredo Tunneling Pseudo-Interface
+        inet6 fe80::100:7f:fffe prefixlen:64 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:18
+
+net7
+        Microsoft 6to4 Adapter #2
+        MULTICAST mtu:-1 index:19
+
+net8
+        Microsoft 6to4 Adapter #3
+        MULTICAST mtu:-1 index:20
+
+net9
+        Microsoft 6to4 Adapter #4
+        MULTICAST mtu:-1 index:21
+
+net10
+        Microsoft ISATAP Adapter #3
+        inet6 fe80::5efe:c0a8:7001 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:22
+
+net11
+        Microsoft ISATAP Adapter #2
+        inet6 fe80::5efe:c0a8:ce01 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:23
+
+net12
+        Microsoft 6to4 Adapter #5
+        MULTICAST mtu:-1 index:24
+
+net13
+        Microsoft 6to4 Adapter #6
+        MULTICAST mtu:-1 index:25
+
+net14
+        Microsoft ISATAP Adapter #4
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:26
+
+net15
+        Microsoft ISATAP Adapter #5
+        inet6 fe80::5efe:c0a8:1701 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:27
+
+wlan1
+        Microsoft Virtual WiFi Miniport Adapter
+        inet 192.168.23.1 netmask:255.255.255.0 broadcast:192.168.23.255 scope:site
+        inet6 fe80::d883:8319:26d:20ac prefixlen:64 scope:link
+        hardware 2A:EE:65:A1:83:42
+        UP MULTICAST mtu:1500 index:28
+
+net16
+        Microsoft ISATAP Adapter #6
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:29
+
+net17
+        Microsoft 6to4 Adapter #7
+        MULTICAST mtu:-1 index:30
+
+net18
+        Microsoft ISATAP Adapter
+        inet6 fe80::200:5efe:d357:e558 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:31
+
+wlan2
+        Qualcomm Atheros AR9485WB-EG Wireless Network Adapter-Virtual WiFi Filter Driver-0000
+        MULTICAST mtu:-1 index:32
+
+wlan3
+        Qualcomm Atheros AR9485WB-EG Wireless Network Adapter-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:33
+
+eth7
+        Qualcomm Atheros AR8162/8166/8168 PCI-E Fast Ethernet Controller (NDIS 6.20)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:34
+
+eth8
+        Qualcomm Atheros AR8162/8166/8168 PCI-E Fast Ethernet Controller (NDIS 6.20)-WFP LightWeight Filter-0000
+        MULTICAST mtu:-1 index:35
+
+eth9
+        WAN Miniport (Network Monitor)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:36
+
+eth10
+        WAN Miniport (IP)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:37
+
+eth11
+        WAN Miniport (IPv6)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:38
+
+wlan4
+        Qualcomm Atheros AR9485WB-EG Wireless Network Adapter-Native WiFi Filter Driver-0000
+        MULTICAST mtu:-1 index:39
+
+wlan5
+        Qualcomm Atheros AR9485WB-EG Wireless Network Adapter-WFP LightWeight Filter-0000
+        MULTICAST mtu:-1 index:40
+
+wlan6
+        Microsoft Virtual WiFi Miniport Adapter-Native WiFi Filter Driver-0000
+        MULTICAST mtu:-1 index:41
+
+wlan7
+        Microsoft Virtual WiFi Miniport Adapter-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:42
+
+wlan8
+        Microsoft Virtual WiFi Miniport Adapter-WFP LightWeight Filter-0000
+        MULTICAST mtu:-1 index:43
+
+ 
+2017-07-07 10:38:49,585	DEBUG	[org.elasticsearch.common.netty.NettyUtils.<clinit>(NettyUtils.java:104)]	using gathering [true]
+ 
+2017-07-07 10:38:49,616	DEBUG	[org.elasticsearch.client.transport.TransportClientNodesService.<init>(TransportClientNodesService.java:120)]	[Samuel Smithers] node_sampler_interval[5s]
+ 
+2017-07-07 10:38:49,647	DEBUG	[org.elasticsearch.transport.netty.NettyInternalESLogger.debug(NettyInternalESLogger.java:58)]	Using select timeout of 500
+ 
+2017-07-07 10:38:49,647	DEBUG	[org.elasticsearch.transport.netty.NettyInternalESLogger.debug(NettyInternalESLogger.java:58)]	Epoll-bug workaround enabled = false
+ 
+2017-07-07 10:38:49,741	DEBUG	[org.elasticsearch.client.transport.TransportClientNodesService.addTransportAddresses(TransportClientNodesService.java:177)]	[Samuel Smithers] adding address [{#transport#-1}{117.78.37.208}{117.78.37.208:9300}]
+ 
+2017-07-07 10:38:49,788	DEBUG	[org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:931)]	[Samuel Smithers] connected to node [{#transport#-1}{117.78.37.208}{117.78.37.208:9300}]
+ 
+2017-07-07 10:38:49,850	DEBUG	[org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:931)]	[Samuel Smithers] connected to node [{node-1}{ZoTdllM7TvyMI1VOIaxhWQ}{192.168.0.10}{117.78.37.208:9300}]
+ 
+2017-07-07 10:38:49,850	DEBUG	[org.elasticsearch.client.transport.TransportClientNodesService.addTransportAddresses(TransportClientNodesService.java:177)]	[Samuel Smithers] adding address [{#transport#-2}{117.78.37.224}{117.78.37.224:9300}]
+ 
+2017-07-07 10:38:49,897	DEBUG	[org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:931)]	[Samuel Smithers] connected to node [{#transport#-2}{117.78.37.224}{117.78.37.224:9300}]
+ 
+2017-07-07 10:38:50,006	DEBUG	[org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:931)]	[Samuel Smithers] connected to node [{node-2}{tNVAey7SSPW8ZIPck877fA}{192.168.0.7}{117.78.37.224:9300}]
+ 
+2017-07-07 10:38:50,006	DEBUG	[org.elasticsearch.client.transport.TransportClientNodesService.addTransportAddresses(TransportClientNodesService.java:177)]	[Samuel Smithers] adding address [{#transport#-3}{117.78.37.196}{117.78.37.196:9300}]
+ 
+2017-07-07 10:38:50,084	DEBUG	[org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:931)]	[Samuel Smithers] connected to node [{#transport#-3}{117.78.37.196}{117.78.37.196:9300}]
+ 
+2017-07-07 10:38:50,146	DEBUG	[org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:931)]	[Samuel Smithers] connected to node [{node-3}{pSmPNgoFQE2zNCwoTzDTUQ}{192.168.0.9}{117.78.37.196:9300}]
+ 
+2017-07-07 10:38:50,146	DEBUG	[org.elasticsearch.client.transport.TransportClientNodesService.addTransportAddresses(TransportClientNodesService.java:177)]	[Samuel Smithers] adding address [{#transport#-4}{117.78.37.177}{117.78.37.177:9300}]
+ 
+2017-07-07 10:38:50,256	DEBUG	[org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:931)]	[Samuel Smithers] connected to node [{#transport#-4}{117.78.37.177}{117.78.37.177:9300}]
+ 
+2017-07-07 10:38:50,318	DEBUG	[org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:931)]	[Samuel Smithers] connected to node [{node-4}{Ys9iMtERRceJpEBMAaKbNQ}{192.168.0.17}{117.78.37.177:9300}]
+ 
+2017-07-07 10:41:10,236	INFO	[org.elasticsearch.plugins.PluginsService.<init>(PluginsService.java:180)]	[Mister Machine] modules [], plugins [], sites []
+ 
+2017-07-07 10:41:10,267	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Mister Machine] creating thread_pool [force_merge], type [fixed], size [1], queue_size [null]
+ 
+2017-07-07 10:41:10,267	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Mister Machine] creating thread_pool [percolate], type [fixed], size [4], queue_size [1k]
+ 
+2017-07-07 10:41:10,282	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:524)]	[Mister Machine] creating thread_pool [fetch_shard_started], type [scaling], min [1], size [8], keep_alive [5m]
+ 
+2017-07-07 10:41:10,282	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Mister Machine] creating thread_pool [listener], type [fixed], size [2], queue_size [null]
+ 
+2017-07-07 10:41:10,282	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Mister Machine] creating thread_pool [index], type [fixed], size [4], queue_size [200]
+ 
+2017-07-07 10:41:10,282	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:524)]	[Mister Machine] creating thread_pool [refresh], type [scaling], min [1], size [2], keep_alive [5m]
+ 
+2017-07-07 10:41:10,282	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Mister Machine] creating thread_pool [suggest], type [fixed], size [4], queue_size [1k]
+ 
+2017-07-07 10:41:10,282	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:445)]	[Mister Machine] creating thread_pool [generic], type [cached], keep_alive [30s]
+ 
+2017-07-07 10:41:10,282	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:524)]	[Mister Machine] creating thread_pool [warmer], type [scaling], min [1], size [2], keep_alive [5m]
+ 
+2017-07-07 10:41:10,282	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Mister Machine] creating thread_pool [search], type [fixed], size [7], queue_size [1k]
+ 
+2017-07-07 10:41:10,282	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:524)]	[Mister Machine] creating thread_pool [flush], type [scaling], min [1], size [2], keep_alive [5m]
+ 
+2017-07-07 10:41:10,282	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:524)]	[Mister Machine] creating thread_pool [fetch_shard_store], type [scaling], min [1], size [8], keep_alive [5m]
+ 
+2017-07-07 10:41:10,282	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:524)]	[Mister Machine] creating thread_pool [management], type [scaling], min [1], size [5], keep_alive [5m]
+ 
+2017-07-07 10:41:10,282	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Mister Machine] creating thread_pool [get], type [fixed], size [4], queue_size [1k]
+ 
+2017-07-07 10:41:10,298	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Mister Machine] creating thread_pool [bulk], type [fixed], size [4], queue_size [50]
+ 
+2017-07-07 10:41:10,298	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:524)]	[Mister Machine] creating thread_pool [snapshot], type [scaling], min [1], size [2], keep_alive [5m]
+ 
+2017-07-07 10:41:11,423	DEBUG	[org.elasticsearch.common.network.IfConfig.doLogging(IfConfig.java:107)]	configuration:
+
+lo
+        Software Loopback Interface 1
+        inet 127.0.0.1 netmask:255.0.0.0 broadcast:127.255.255.255 scope:host
+        inet6 ::1 prefixlen:128 scope:host
+        UP MULTICAST LOOPBACK mtu:-1 index:1
+
+net0
+        WAN Miniport (SSTP)
+        MULTICAST mtu:-1 index:2
+
+net1
+        WAN Miniport (IKEv2)
+        MULTICAST mtu:-1 index:3
+
+net2
+        WAN Miniport (L2TP)
+        MULTICAST mtu:-1 index:4
+
+net3
+        WAN Miniport (PPTP)
+        MULTICAST mtu:-1 index:5
+
+ppp0
+        WAN Miniport (PPPOE)
+        MULTICAST mtu:-1 index:6
+
+eth0
+        WAN Miniport (IPv6)
+        MULTICAST mtu:-1 index:7
+
+eth1
+        WAN Miniport (Network Monitor)
+        MULTICAST mtu:-1 index:8
+
+eth2
+        WAN Miniport (IP)
+        MULTICAST mtu:-1 index:9
+
+ppp1
+        RAS Async Adapter
+        MULTICAST mtu:-1 index:10
+
+net4
+        Bluetooth 
+        MULTICAST mtu:-1 index:11
+
+eth3
+        Bluetooth 
+        inet6 fe80::3c4c:f6a:8c09:60f1 prefixlen:64 scope:link
+        hardware B8:EE:65:A1:C1:36
+        MULTICAST mtu:1500 index:12
+
+eth4
+        VMware Virtual Ethernet Adapter for VMnet1
+        inet 192.168.206.1 netmask:255.255.255.0 broadcast:192.168.206.255 scope:site
+        inet6 fe80::1d5d:1a62:e549:fdfd prefixlen:64 scope:link
+        hardware 00:50:56:C0:00:01
+        UP MULTICAST mtu:1500 index:13
+
+eth5
+        VMware Virtual Ethernet Adapter for VMnet8
+        inet 192.168.112.1 netmask:255.255.255.0 broadcast:192.168.112.255 scope:site
+        inet6 fe80::50e:ba73:6410:3412 prefixlen:64 scope:link
+        hardware 00:50:56:C0:00:08
+        UP MULTICAST mtu:1500 index:14
+
+eth6
+        Qualcomm Atheros AR8162/8166/8168 PCI-E Fast Ethernet Controller (NDIS 6.20)
+        inet 211.87.229.88 netmask:255.255.255.0 broadcast:211.87.229.255
+        inet6 2001:da8:7001:4002:5055:34d6:1a54:e36e prefixlen:64
+        inet6 2001:da8:7001:4002:4d2a:aa90:46ca:192 prefixlen:128
+        inet6 fe80::5055:34d6:1a54:e36e prefixlen:128 scope:link
+        hardware F0:76:1C:56:7A:F0
+        UP MULTICAST mtu:1500 index:15
+
+wlan0
+        Qualcomm Atheros AR9485WB-EG Wireless Network Adapter
+        inet6 fe80::1829:3f66:3f1e:faac prefixlen:64 scope:link
+        hardware B8:EE:65:A1:83:42
+        MULTICAST mtu:1500 index:16
+
+net5
+        Microsoft 6to4 Adapter
+        MULTICAST mtu:-1 index:17
+
+net6
+        Teredo Tunneling Pseudo-Interface
+        inet6 fe80::100:7f:fffe prefixlen:64 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:18
+
+net7
+        Microsoft 6to4 Adapter #2
+        MULTICAST mtu:-1 index:19
+
+net8
+        Microsoft 6to4 Adapter #3
+        MULTICAST mtu:-1 index:20
+
+net9
+        Microsoft 6to4 Adapter #4
+        MULTICAST mtu:-1 index:21
+
+net10
+        Microsoft ISATAP Adapter #3
+        inet6 fe80::5efe:c0a8:7001 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:22
+
+net11
+        Microsoft ISATAP Adapter #2
+        inet6 fe80::5efe:c0a8:ce01 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:23
+
+net12
+        Microsoft 6to4 Adapter #5
+        MULTICAST mtu:-1 index:24
+
+net13
+        Microsoft 6to4 Adapter #6
+        MULTICAST mtu:-1 index:25
+
+net14
+        Microsoft ISATAP Adapter #4
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:26
+
+net15
+        Microsoft ISATAP Adapter #5
+        inet6 fe80::5efe:c0a8:1701 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:27
+
+wlan1
+        Microsoft Virtual WiFi Miniport Adapter
+        inet 192.168.23.1 netmask:255.255.255.0 broadcast:192.168.23.255 scope:site
+        inet6 fe80::d883:8319:26d:20ac prefixlen:64 scope:link
+        hardware 2A:EE:65:A1:83:42
+        UP MULTICAST mtu:1500 index:28
+
+net16
+        Microsoft ISATAP Adapter #6
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:29
+
+net17
+        Microsoft 6to4 Adapter #7
+        MULTICAST mtu:-1 index:30
+
+net18
+        Microsoft ISATAP Adapter
+        inet6 fe80::200:5efe:d357:e558 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:31
+
+wlan2
+        Qualcomm Atheros AR9485WB-EG Wireless Network Adapter-Virtual WiFi Filter Driver-0000
+        MULTICAST mtu:-1 index:32
+
+wlan3
+        Qualcomm Atheros AR9485WB-EG Wireless Network Adapter-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:33
+
+eth7
+        Qualcomm Atheros AR8162/8166/8168 PCI-E Fast Ethernet Controller (NDIS 6.20)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:34
+
+eth8
+        Qualcomm Atheros AR8162/8166/8168 PCI-E Fast Ethernet Controller (NDIS 6.20)-WFP LightWeight Filter-0000
+        MULTICAST mtu:-1 index:35
+
+eth9
+        WAN Miniport (Network Monitor)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:36
+
+eth10
+        WAN Miniport (IP)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:37
+
+eth11
+        WAN Miniport (IPv6)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:38
+
+wlan4
+        Qualcomm Atheros AR9485WB-EG Wireless Network Adapter-Native WiFi Filter Driver-0000
+        MULTICAST mtu:-1 index:39
+
+wlan5
+        Qualcomm Atheros AR9485WB-EG Wireless Network Adapter-WFP LightWeight Filter-0000
+        MULTICAST mtu:-1 index:40
+
+wlan6
+        Microsoft Virtual WiFi Miniport Adapter-Native WiFi Filter Driver-0000
+        MULTICAST mtu:-1 index:41
+
+wlan7
+        Microsoft Virtual WiFi Miniport Adapter-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:42
+
+wlan8
+        Microsoft Virtual WiFi Miniport Adapter-WFP LightWeight Filter-0000
+        MULTICAST mtu:-1 index:43
+
+ 
+2017-07-07 10:41:11,439	DEBUG	[org.elasticsearch.common.netty.NettyUtils.<clinit>(NettyUtils.java:104)]	using gathering [true]
+ 
+2017-07-07 10:41:11,470	DEBUG	[org.elasticsearch.client.transport.TransportClientNodesService.<init>(TransportClientNodesService.java:120)]	[Mister Machine] node_sampler_interval[5s]
+ 
+2017-07-07 10:41:11,501	DEBUG	[org.elasticsearch.transport.netty.NettyInternalESLogger.debug(NettyInternalESLogger.java:58)]	Using select timeout of 500
+ 
+2017-07-07 10:41:11,501	DEBUG	[org.elasticsearch.transport.netty.NettyInternalESLogger.debug(NettyInternalESLogger.java:58)]	Epoll-bug workaround enabled = false
+ 
+2017-07-07 10:41:11,657	DEBUG	[org.elasticsearch.client.transport.TransportClientNodesService.addTransportAddresses(TransportClientNodesService.java:177)]	[Mister Machine] adding address [{#transport#-1}{117.78.37.208}{117.78.37.208:9300}]
+ 
+2017-07-07 10:41:11,704	DEBUG	[org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:931)]	[Mister Machine] connected to node [{#transport#-1}{117.78.37.208}{117.78.37.208:9300}]
+ 
+2017-07-07 10:41:11,782	DEBUG	[org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:931)]	[Mister Machine] connected to node [{node-1}{ZoTdllM7TvyMI1VOIaxhWQ}{192.168.0.10}{117.78.37.208:9300}]
+ 
+2017-07-07 10:41:11,782	DEBUG	[org.elasticsearch.client.transport.TransportClientNodesService.addTransportAddresses(TransportClientNodesService.java:177)]	[Mister Machine] adding address [{#transport#-2}{117.78.37.224}{117.78.37.224:9300}]
+ 
+2017-07-07 10:41:11,829	DEBUG	[org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:931)]	[Mister Machine] connected to node [{#transport#-2}{117.78.37.224}{117.78.37.224:9300}]
+ 
+2017-07-07 10:41:11,938	DEBUG	[org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:931)]	[Mister Machine] connected to node [{node-2}{tNVAey7SSPW8ZIPck877fA}{192.168.0.7}{117.78.37.224:9300}]
+ 
+2017-07-07 10:41:11,938	DEBUG	[org.elasticsearch.client.transport.TransportClientNodesService.addTransportAddresses(TransportClientNodesService.java:177)]	[Mister Machine] adding address [{#transport#-3}{117.78.37.196}{117.78.37.196:9300}]
+ 
+2017-07-07 10:41:12,016	DEBUG	[org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:931)]	[Mister Machine] connected to node [{#transport#-3}{117.78.37.196}{117.78.37.196:9300}]
+ 
+2017-07-07 10:41:12,078	DEBUG	[org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:931)]	[Mister Machine] connected to node [{node-3}{pSmPNgoFQE2zNCwoTzDTUQ}{192.168.0.9}{117.78.37.196:9300}]
+ 
+2017-07-07 10:41:12,078	DEBUG	[org.elasticsearch.client.transport.TransportClientNodesService.addTransportAddresses(TransportClientNodesService.java:177)]	[Mister Machine] adding address [{#transport#-4}{117.78.37.177}{117.78.37.177:9300}]
+ 
+2017-07-07 10:41:12,172	DEBUG	[org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:931)]	[Mister Machine] connected to node [{#transport#-4}{117.78.37.177}{117.78.37.177:9300}]
+ 
+2017-07-07 10:41:12,250	DEBUG	[org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:931)]	[Mister Machine] connected to node [{node-4}{Ys9iMtERRceJpEBMAaKbNQ}{192.168.0.17}{117.78.37.177:9300}]
+ 
+2017-07-07 10:48:08,125	INFO	[org.elasticsearch.plugins.PluginsService.<init>(PluginsService.java:180)]	[Hardnose] modules [], plugins [], sites []
+ 
+2017-07-07 10:48:08,156	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Hardnose] creating thread_pool [force_merge], type [fixed], size [1], queue_size [null]
+ 
+2017-07-07 10:48:08,172	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Hardnose] creating thread_pool [percolate], type [fixed], size [4], queue_size [1k]
+ 
+2017-07-07 10:48:08,187	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:524)]	[Hardnose] creating thread_pool [fetch_shard_started], type [scaling], min [1], size [8], keep_alive [5m]
+ 
+2017-07-07 10:48:08,187	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Hardnose] creating thread_pool [listener], type [fixed], size [2], queue_size [null]
+ 
+2017-07-07 10:48:08,187	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Hardnose] creating thread_pool [index], type [fixed], size [4], queue_size [200]
+ 
+2017-07-07 10:48:08,187	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:524)]	[Hardnose] creating thread_pool [refresh], type [scaling], min [1], size [2], keep_alive [5m]
+ 
+2017-07-07 10:48:08,187	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Hardnose] creating thread_pool [suggest], type [fixed], size [4], queue_size [1k]
+ 
+2017-07-07 10:48:08,187	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:445)]	[Hardnose] creating thread_pool [generic], type [cached], keep_alive [30s]
+ 
+2017-07-07 10:48:08,187	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:524)]	[Hardnose] creating thread_pool [warmer], type [scaling], min [1], size [2], keep_alive [5m]
+ 
+2017-07-07 10:48:08,187	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Hardnose] creating thread_pool [search], type [fixed], size [7], queue_size [1k]
+ 
+2017-07-07 10:48:08,187	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:524)]	[Hardnose] creating thread_pool [flush], type [scaling], min [1], size [2], keep_alive [5m]
+ 
+2017-07-07 10:48:08,187	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:524)]	[Hardnose] creating thread_pool [fetch_shard_store], type [scaling], min [1], size [8], keep_alive [5m]
+ 
+2017-07-07 10:48:08,187	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:524)]	[Hardnose] creating thread_pool [management], type [scaling], min [1], size [5], keep_alive [5m]
+ 
+2017-07-07 10:48:08,187	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Hardnose] creating thread_pool [get], type [fixed], size [4], queue_size [1k]
+ 
+2017-07-07 10:48:08,187	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Hardnose] creating thread_pool [bulk], type [fixed], size [4], queue_size [50]
+ 
+2017-07-07 10:48:08,187	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:524)]	[Hardnose] creating thread_pool [snapshot], type [scaling], min [1], size [2], keep_alive [5m]
+ 
+2017-07-07 10:48:09,375	DEBUG	[org.elasticsearch.common.network.IfConfig.doLogging(IfConfig.java:107)]	configuration:
+
+lo
+        Software Loopback Interface 1
+        inet 127.0.0.1 netmask:255.0.0.0 broadcast:127.255.255.255 scope:host
+        inet6 ::1 prefixlen:128 scope:host
+        UP MULTICAST LOOPBACK mtu:-1 index:1
+
+net0
+        WAN Miniport (SSTP)
+        MULTICAST mtu:-1 index:2
+
+net1
+        WAN Miniport (IKEv2)
+        MULTICAST mtu:-1 index:3
+
+net2
+        WAN Miniport (L2TP)
+        MULTICAST mtu:-1 index:4
+
+net3
+        WAN Miniport (PPTP)
+        MULTICAST mtu:-1 index:5
+
+ppp0
+        WAN Miniport (PPPOE)
+        MULTICAST mtu:-1 index:6
+
+eth0
+        WAN Miniport (IPv6)
+        MULTICAST mtu:-1 index:7
+
+eth1
+        WAN Miniport (Network Monitor)
+        MULTICAST mtu:-1 index:8
+
+eth2
+        WAN Miniport (IP)
+        MULTICAST mtu:-1 index:9
+
+ppp1
+        RAS Async Adapter
+        MULTICAST mtu:-1 index:10
+
+net4
+        Bluetooth 
+        MULTICAST mtu:-1 index:11
+
+eth3
+        Bluetooth 
+        inet6 fe80::3c4c:f6a:8c09:60f1 prefixlen:64 scope:link
+        hardware B8:EE:65:A1:C1:36
+        MULTICAST mtu:1500 index:12
+
+eth4
+        VMware Virtual Ethernet Adapter for VMnet1
+        inet 192.168.206.1 netmask:255.255.255.0 broadcast:192.168.206.255 scope:site
+        inet6 fe80::1d5d:1a62:e549:fdfd prefixlen:64 scope:link
+        hardware 00:50:56:C0:00:01
+        UP MULTICAST mtu:1500 index:13
+
+eth5
+        VMware Virtual Ethernet Adapter for VMnet8
+        inet 192.168.112.1 netmask:255.255.255.0 broadcast:192.168.112.255 scope:site
+        inet6 fe80::50e:ba73:6410:3412 prefixlen:64 scope:link
+        hardware 00:50:56:C0:00:08
+        UP MULTICAST mtu:1500 index:14
+
+eth6
+        Qualcomm Atheros AR8162/8166/8168 PCI-E Fast Ethernet Controller (NDIS 6.20)
+        inet 211.87.229.88 netmask:255.255.255.0 broadcast:211.87.229.255
+        inet6 2001:da8:7001:4002:5055:34d6:1a54:e36e prefixlen:64
+        inet6 2001:da8:7001:4002:4d2a:aa90:46ca:192 prefixlen:128
+        inet6 fe80::5055:34d6:1a54:e36e prefixlen:128 scope:link
+        hardware F0:76:1C:56:7A:F0
+        UP MULTICAST mtu:1500 index:15
+
+wlan0
+        Qualcomm Atheros AR9485WB-EG Wireless Network Adapter
+        inet6 fe80::1829:3f66:3f1e:faac prefixlen:64 scope:link
+        hardware B8:EE:65:A1:83:42
+        MULTICAST mtu:1500 index:16
+
+net5
+        Microsoft 6to4 Adapter
+        MULTICAST mtu:-1 index:17
+
+net6
+        Teredo Tunneling Pseudo-Interface
+        inet6 fe80::100:7f:fffe prefixlen:64 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:18
+
+net7
+        Microsoft 6to4 Adapter #2
+        MULTICAST mtu:-1 index:19
+
+net8
+        Microsoft 6to4 Adapter #3
+        MULTICAST mtu:-1 index:20
+
+net9
+        Microsoft 6to4 Adapter #4
+        MULTICAST mtu:-1 index:21
+
+net10
+        Microsoft ISATAP Adapter #3
+        inet6 fe80::5efe:c0a8:7001 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:22
+
+net11
+        Microsoft ISATAP Adapter #2
+        inet6 fe80::5efe:c0a8:ce01 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:23
+
+net12
+        Microsoft 6to4 Adapter #5
+        MULTICAST mtu:-1 index:24
+
+net13
+        Microsoft 6to4 Adapter #6
+        MULTICAST mtu:-1 index:25
+
+net14
+        Microsoft ISATAP Adapter #4
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:26
+
+net15
+        Microsoft ISATAP Adapter #5
+        inet6 fe80::5efe:c0a8:1701 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:27
+
+wlan1
+        Microsoft Virtual WiFi Miniport Adapter
+        inet 192.168.23.1 netmask:255.255.255.0 broadcast:192.168.23.255 scope:site
+        inet6 fe80::d883:8319:26d:20ac prefixlen:64 scope:link
+        hardware 2A:EE:65:A1:83:42
+        UP MULTICAST mtu:1500 index:28
+
+net16
+        Microsoft ISATAP Adapter #6
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:29
+
+net17
+        Microsoft 6to4 Adapter #7
+        MULTICAST mtu:-1 index:30
+
+net18
+        Microsoft ISATAP Adapter
+        inet6 fe80::200:5efe:d357:e558 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:31
+
+wlan2
+        Qualcomm Atheros AR9485WB-EG Wireless Network Adapter-Virtual WiFi Filter Driver-0000
+        MULTICAST mtu:-1 index:32
+
+wlan3
+        Qualcomm Atheros AR9485WB-EG Wireless Network Adapter-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:33
+
+eth7
+        Qualcomm Atheros AR8162/8166/8168 PCI-E Fast Ethernet Controller (NDIS 6.20)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:34
+
+eth8
+        Qualcomm Atheros AR8162/8166/8168 PCI-E Fast Ethernet Controller (NDIS 6.20)-WFP LightWeight Filter-0000
+        MULTICAST mtu:-1 index:35
+
+eth9
+        WAN Miniport (Network Monitor)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:36
+
+eth10
+        WAN Miniport (IP)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:37
+
+eth11
+        WAN Miniport (IPv6)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:38
+
+wlan4
+        Qualcomm Atheros AR9485WB-EG Wireless Network Adapter-Native WiFi Filter Driver-0000
+        MULTICAST mtu:-1 index:39
+
+wlan5
+        Qualcomm Atheros AR9485WB-EG Wireless Network Adapter-WFP LightWeight Filter-0000
+        MULTICAST mtu:-1 index:40
+
+wlan6
+        Microsoft Virtual WiFi Miniport Adapter-Native WiFi Filter Driver-0000
+        MULTICAST mtu:-1 index:41
+
+wlan7
+        Microsoft Virtual WiFi Miniport Adapter-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:42
+
+wlan8
+        Microsoft Virtual WiFi Miniport Adapter-WFP LightWeight Filter-0000
+        MULTICAST mtu:-1 index:43
+
+ 
+2017-07-07 10:48:09,406	DEBUG	[org.elasticsearch.common.netty.NettyUtils.<clinit>(NettyUtils.java:104)]	using gathering [true]
+ 
+2017-07-07 10:48:09,422	DEBUG	[org.elasticsearch.client.transport.TransportClientNodesService.<init>(TransportClientNodesService.java:120)]	[Hardnose] node_sampler_interval[5s]
+ 
+2017-07-07 10:48:09,453	DEBUG	[org.elasticsearch.transport.netty.NettyInternalESLogger.debug(NettyInternalESLogger.java:58)]	Using select timeout of 500
+ 
+2017-07-07 10:48:09,453	DEBUG	[org.elasticsearch.transport.netty.NettyInternalESLogger.debug(NettyInternalESLogger.java:58)]	Epoll-bug workaround enabled = false
+ 
+2017-07-07 10:48:09,531	DEBUG	[org.elasticsearch.client.transport.TransportClientNodesService.addTransportAddresses(TransportClientNodesService.java:177)]	[Hardnose] adding address [{#transport#-1}{117.78.37.208}{117.78.37.208:9300}]
+ 
+2017-07-07 10:48:09,578	DEBUG	[org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:931)]	[Hardnose] connected to node [{#transport#-1}{117.78.37.208}{117.78.37.208:9300}]
+ 
+2017-07-07 10:48:09,656	DEBUG	[org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:931)]	[Hardnose] connected to node [{node-1}{ZoTdllM7TvyMI1VOIaxhWQ}{192.168.0.10}{117.78.37.208:9300}]
+ 
+2017-07-07 10:48:09,656	DEBUG	[org.elasticsearch.client.transport.TransportClientNodesService.addTransportAddresses(TransportClientNodesService.java:177)]	[Hardnose] adding address [{#transport#-2}{117.78.37.224}{117.78.37.224:9300}]
+ 
+2017-07-07 10:48:09,703	DEBUG	[org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:931)]	[Hardnose] connected to node [{#transport#-2}{117.78.37.224}{117.78.37.224:9300}]
+ 
+2017-07-07 10:48:09,874	DEBUG	[org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:931)]	[Hardnose] connected to node [{node-2}{tNVAey7SSPW8ZIPck877fA}{192.168.0.7}{117.78.37.224:9300}]
+ 
+2017-07-07 10:48:09,874	DEBUG	[org.elasticsearch.client.transport.TransportClientNodesService.addTransportAddresses(TransportClientNodesService.java:177)]	[Hardnose] adding address [{#transport#-3}{117.78.37.196}{117.78.37.196:9300}]
+ 
+2017-07-07 10:48:09,952	DEBUG	[org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:931)]	[Hardnose] connected to node [{#transport#-3}{117.78.37.196}{117.78.37.196:9300}]
+ 
+2017-07-07 10:48:10,030	DEBUG	[org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:931)]	[Hardnose] connected to node [{node-3}{pSmPNgoFQE2zNCwoTzDTUQ}{192.168.0.9}{117.78.37.196:9300}]
+ 
+2017-07-07 10:48:10,030	DEBUG	[org.elasticsearch.client.transport.TransportClientNodesService.addTransportAddresses(TransportClientNodesService.java:177)]	[Hardnose] adding address [{#transport#-4}{117.78.37.177}{117.78.37.177:9300}]
+ 
+2017-07-07 10:48:10,124	DEBUG	[org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:931)]	[Hardnose] connected to node [{#transport#-4}{117.78.37.177}{117.78.37.177:9300}]
+ 
+2017-07-07 10:48:10,186	DEBUG	[org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:931)]	[Hardnose] connected to node [{node-4}{Ys9iMtERRceJpEBMAaKbNQ}{192.168.0.17}{117.78.37.177:9300}]
+ 
+2017-07-07 10:48:10,358	DEBUG	[org.elasticsearch.common.compress.lzf.LZFCompressor.<init>(LZFCompressor.java:49)]	using decoder[VanillaChunkDecoder] 
+ 
+2017-07-07 11:03:48,036	INFO	[org.elasticsearch.plugins.PluginsService.<init>(PluginsService.java:180)]	[Domo] modules [], plugins [], sites []
+ 
+2017-07-07 11:03:48,052	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Domo] creating thread_pool [force_merge], type [fixed], size [1], queue_size [null]
+ 
+2017-07-07 11:03:48,067	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Domo] creating thread_pool [percolate], type [fixed], size [4], queue_size [1k]
+ 
+2017-07-07 11:03:48,083	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:524)]	[Domo] creating thread_pool [fetch_shard_started], type [scaling], min [1], size [8], keep_alive [5m]
+ 
+2017-07-07 11:03:48,083	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Domo] creating thread_pool [listener], type [fixed], size [2], queue_size [null]
+ 
+2017-07-07 11:03:48,083	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Domo] creating thread_pool [index], type [fixed], size [4], queue_size [200]
+ 
+2017-07-07 11:03:48,083	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:524)]	[Domo] creating thread_pool [refresh], type [scaling], min [1], size [2], keep_alive [5m]
+ 
+2017-07-07 11:03:48,083	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Domo] creating thread_pool [suggest], type [fixed], size [4], queue_size [1k]
+ 
+2017-07-07 11:03:48,083	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:445)]	[Domo] creating thread_pool [generic], type [cached], keep_alive [30s]
+ 
+2017-07-07 11:03:48,083	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:524)]	[Domo] creating thread_pool [warmer], type [scaling], min [1], size [2], keep_alive [5m]
+ 
+2017-07-07 11:03:48,083	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Domo] creating thread_pool [search], type [fixed], size [7], queue_size [1k]
+ 
+2017-07-07 11:03:48,083	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:524)]	[Domo] creating thread_pool [flush], type [scaling], min [1], size [2], keep_alive [5m]
+ 
+2017-07-07 11:03:48,083	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:524)]	[Domo] creating thread_pool [fetch_shard_store], type [scaling], min [1], size [8], keep_alive [5m]
+ 
+2017-07-07 11:03:48,083	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:524)]	[Domo] creating thread_pool [management], type [scaling], min [1], size [5], keep_alive [5m]
+ 
+2017-07-07 11:03:48,083	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Domo] creating thread_pool [get], type [fixed], size [4], queue_size [1k]
+ 
+2017-07-07 11:03:48,083	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Domo] creating thread_pool [bulk], type [fixed], size [4], queue_size [50]
+ 
+2017-07-07 11:03:48,083	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:524)]	[Domo] creating thread_pool [snapshot], type [scaling], min [1], size [2], keep_alive [5m]
+ 
+2017-07-07 11:03:49,128	DEBUG	[org.elasticsearch.common.network.IfConfig.doLogging(IfConfig.java:107)]	configuration:
+
+lo
+        Software Loopback Interface 1
+        inet 127.0.0.1 netmask:255.0.0.0 broadcast:127.255.255.255 scope:host
+        inet6 ::1 prefixlen:128 scope:host
+        UP MULTICAST LOOPBACK mtu:-1 index:1
+
+net0
+        WAN Miniport (SSTP)
+        MULTICAST mtu:-1 index:2
+
+net1
+        WAN Miniport (IKEv2)
+        MULTICAST mtu:-1 index:3
+
+net2
+        WAN Miniport (L2TP)
+        MULTICAST mtu:-1 index:4
+
+net3
+        WAN Miniport (PPTP)
+        MULTICAST mtu:-1 index:5
+
+ppp0
+        WAN Miniport (PPPOE)
+        MULTICAST mtu:-1 index:6
+
+eth0
+        WAN Miniport (IPv6)
+        MULTICAST mtu:-1 index:7
+
+eth1
+        WAN Miniport (Network Monitor)
+        MULTICAST mtu:-1 index:8
+
+eth2
+        WAN Miniport (IP)
+        MULTICAST mtu:-1 index:9
+
+ppp1
+        RAS Async Adapter
+        MULTICAST mtu:-1 index:10
+
+net4
+        Bluetooth 
+        MULTICAST mtu:-1 index:11
+
+eth3
+        Bluetooth 
+        inet6 fe80::3c4c:f6a:8c09:60f1 prefixlen:64 scope:link
+        hardware B8:EE:65:A1:C1:36
+        MULTICAST mtu:1500 index:12
+
+eth4
+        VMware Virtual Ethernet Adapter for VMnet1
+        inet 192.168.206.1 netmask:255.255.255.0 broadcast:192.168.206.255 scope:site
+        inet6 fe80::1d5d:1a62:e549:fdfd prefixlen:64 scope:link
+        hardware 00:50:56:C0:00:01
+        UP MULTICAST mtu:1500 index:13
+
+eth5
+        VMware Virtual Ethernet Adapter for VMnet8
+        inet 192.168.112.1 netmask:255.255.255.0 broadcast:192.168.112.255 scope:site
+        inet6 fe80::50e:ba73:6410:3412 prefixlen:64 scope:link
+        hardware 00:50:56:C0:00:08
+        UP MULTICAST mtu:1500 index:14
+
+eth6
+        Qualcomm Atheros AR8162/8166/8168 PCI-E Fast Ethernet Controller (NDIS 6.20)
+        inet 211.87.229.88 netmask:255.255.255.0 broadcast:211.87.229.255
+        inet6 2001:da8:7001:4002:5055:34d6:1a54:e36e prefixlen:64
+        inet6 2001:da8:7001:4002:4d2a:aa90:46ca:192 prefixlen:128
+        inet6 fe80::5055:34d6:1a54:e36e prefixlen:128 scope:link
+        hardware F0:76:1C:56:7A:F0
+        UP MULTICAST mtu:1500 index:15
+
+wlan0
+        Qualcomm Atheros AR9485WB-EG Wireless Network Adapter
+        inet6 fe80::1829:3f66:3f1e:faac prefixlen:64 scope:link
+        hardware B8:EE:65:A1:83:42
+        MULTICAST mtu:1500 index:16
+
+net5
+        Microsoft 6to4 Adapter
+        MULTICAST mtu:-1 index:17
+
+net6
+        Teredo Tunneling Pseudo-Interface
+        inet6 fe80::100:7f:fffe prefixlen:64 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:18
+
+net7
+        Microsoft 6to4 Adapter #2
+        MULTICAST mtu:-1 index:19
+
+net8
+        Microsoft 6to4 Adapter #3
+        MULTICAST mtu:-1 index:20
+
+net9
+        Microsoft 6to4 Adapter #4
+        MULTICAST mtu:-1 index:21
+
+net10
+        Microsoft ISATAP Adapter #3
+        inet6 fe80::5efe:c0a8:7001 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:22
+
+net11
+        Microsoft ISATAP Adapter #2
+        inet6 fe80::5efe:c0a8:ce01 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:23
+
+net12
+        Microsoft 6to4 Adapter #5
+        MULTICAST mtu:-1 index:24
+
+net13
+        Microsoft 6to4 Adapter #6
+        MULTICAST mtu:-1 index:25
+
+net14
+        Microsoft ISATAP Adapter #4
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:26
+
+net15
+        Microsoft ISATAP Adapter #5
+        inet6 fe80::5efe:c0a8:1701 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:27
+
+wlan1
+        Microsoft Virtual WiFi Miniport Adapter
+        inet 192.168.23.1 netmask:255.255.255.0 broadcast:192.168.23.255 scope:site
+        inet6 fe80::d883:8319:26d:20ac prefixlen:64 scope:link
+        hardware 2A:EE:65:A1:83:42
+        UP MULTICAST mtu:1500 index:28
+
+net16
+        Microsoft ISATAP Adapter #6
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:29
+
+net17
+        Microsoft 6to4 Adapter #7
+        MULTICAST mtu:-1 index:30
+
+net18
+        Microsoft ISATAP Adapter
+        inet6 fe80::200:5efe:d357:e558 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:31
+
+wlan2
+        Qualcomm Atheros AR9485WB-EG Wireless Network Adapter-Virtual WiFi Filter Driver-0000
+        MULTICAST mtu:-1 index:32
+
+wlan3
+        Qualcomm Atheros AR9485WB-EG Wireless Network Adapter-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:33
+
+eth7
+        Qualcomm Atheros AR8162/8166/8168 PCI-E Fast Ethernet Controller (NDIS 6.20)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:34
+
+eth8
+        Qualcomm Atheros AR8162/8166/8168 PCI-E Fast Ethernet Controller (NDIS 6.20)-WFP LightWeight Filter-0000
+        MULTICAST mtu:-1 index:35
+
+eth9
+        WAN Miniport (Network Monitor)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:36
+
+eth10
+        WAN Miniport (IP)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:37
+
+eth11
+        WAN Miniport (IPv6)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:38
+
+wlan4
+        Qualcomm Atheros AR9485WB-EG Wireless Network Adapter-Native WiFi Filter Driver-0000
+        MULTICAST mtu:-1 index:39
+
+wlan5
+        Qualcomm Atheros AR9485WB-EG Wireless Network Adapter-WFP LightWeight Filter-0000
+        MULTICAST mtu:-1 index:40
+
+wlan6
+        Microsoft Virtual WiFi Miniport Adapter-Native WiFi Filter Driver-0000
+        MULTICAST mtu:-1 index:41
+
+wlan7
+        Microsoft Virtual WiFi Miniport Adapter-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:42
+
+wlan8
+        Microsoft Virtual WiFi Miniport Adapter-WFP LightWeight Filter-0000
+        MULTICAST mtu:-1 index:43
+
+ 
+2017-07-07 11:03:49,144	DEBUG	[org.elasticsearch.common.netty.NettyUtils.<clinit>(NettyUtils.java:104)]	using gathering [true]
+ 
+2017-07-07 11:03:49,175	DEBUG	[org.elasticsearch.client.transport.TransportClientNodesService.<init>(TransportClientNodesService.java:120)]	[Domo] node_sampler_interval[5s]
+ 
+2017-07-07 11:03:49,191	DEBUG	[org.elasticsearch.transport.netty.NettyInternalESLogger.debug(NettyInternalESLogger.java:58)]	Using select timeout of 500
+ 
+2017-07-07 11:03:49,191	DEBUG	[org.elasticsearch.transport.netty.NettyInternalESLogger.debug(NettyInternalESLogger.java:58)]	Epoll-bug workaround enabled = false
+ 
+2017-07-07 11:03:49,269	DEBUG	[org.elasticsearch.client.transport.TransportClientNodesService.addTransportAddresses(TransportClientNodesService.java:177)]	[Domo] adding address [{#transport#-1}{117.78.37.208}{117.78.37.208:9300}]
+ 
+2017-07-07 11:03:49,315	DEBUG	[org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:931)]	[Domo] connected to node [{#transport#-1}{117.78.37.208}{117.78.37.208:9300}]
+ 
+2017-07-07 11:03:49,393	DEBUG	[org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:931)]	[Domo] connected to node [{node-1}{ZoTdllM7TvyMI1VOIaxhWQ}{192.168.0.10}{117.78.37.208:9300}]
+ 
+2017-07-07 11:03:49,393	DEBUG	[org.elasticsearch.client.transport.TransportClientNodesService.addTransportAddresses(TransportClientNodesService.java:177)]	[Domo] adding address [{#transport#-2}{117.78.37.224}{117.78.37.224:9300}]
+ 
+2017-07-07 11:03:50,581	DEBUG	[org.elasticsearch.client.transport.TransportClientNodesService$SimpleNodeSampler.doSample(TransportClientNodesService.java:356)]	[Domo] failed to connect to node [{#transport#-2}{117.78.37.224}{117.78.37.224:9300}], removed from nodes list
+ ConnectTransportException[[][117.78.37.224:9300] connect_timeout[30s]]; nested: ConnectException[Connection refused: no further information: /117.78.37.224:9300];
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannelsLight(NettyTransport.java:952)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:916)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNodeLight(NettyTransport.java:888)
+	at org.elasticsearch.transport.TransportService.connectToNodeLight(TransportService.java:267)
+	at org.elasticsearch.client.transport.TransportClientNodesService$SimpleNodeSampler.doSample(TransportClientNodesService.java:354)
+	at org.elasticsearch.client.transport.TransportClientNodesService$NodeSampler.sample(TransportClientNodesService.java:300)
+	at org.elasticsearch.client.transport.TransportClientNodesService.addTransportAddresses(TransportClientNodesService.java:181)
+	at org.elasticsearch.client.transport.TransportClient.addTransportAddress(TransportClient.java:236)
+	at connectES.ElasticsearchTools.<clinit>(ElasticsearchTools.java:44)
+Caused by: java.net.ConnectException: Connection refused: no further information: /117.78.37.224:9300
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(Unknown Source)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:152)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:105)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:79)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+2017-07-07 11:03:50,581	DEBUG	[org.elasticsearch.client.transport.TransportClientNodesService.addTransportAddresses(TransportClientNodesService.java:177)]	[Domo] adding address [{#transport#-3}{117.78.37.196}{117.78.37.196:9300}]
+ 
+2017-07-07 11:03:51,689	DEBUG	[org.elasticsearch.client.transport.TransportClientNodesService$SimpleNodeSampler.doSample(TransportClientNodesService.java:356)]	[Domo] failed to connect to node [{#transport#-2}{117.78.37.224}{117.78.37.224:9300}], removed from nodes list
+ ConnectTransportException[[][117.78.37.224:9300] connect_timeout[30s]]; nested: ConnectException[Connection refused: no further information: /117.78.37.224:9300];
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannelsLight(NettyTransport.java:952)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:916)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNodeLight(NettyTransport.java:888)
+	at org.elasticsearch.transport.TransportService.connectToNodeLight(TransportService.java:267)
+	at org.elasticsearch.client.transport.TransportClientNodesService$SimpleNodeSampler.doSample(TransportClientNodesService.java:354)
+	at org.elasticsearch.client.transport.TransportClientNodesService$NodeSampler.sample(TransportClientNodesService.java:300)
+	at org.elasticsearch.client.transport.TransportClientNodesService.addTransportAddresses(TransportClientNodesService.java:181)
+	at org.elasticsearch.client.transport.TransportClient.addTransportAddress(TransportClient.java:236)
+	at connectES.ElasticsearchTools.<clinit>(ElasticsearchTools.java:45)
+Caused by: java.net.ConnectException: Connection refused: no further information: /117.78.37.224:9300
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(Unknown Source)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:152)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:105)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:79)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+2017-07-07 11:03:51,720	DEBUG	[org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:931)]	[Domo] connected to node [{#transport#-3}{117.78.37.196}{117.78.37.196:9300}]
+ 
+2017-07-07 11:03:51,860	DEBUG	[org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:931)]	[Domo] connected to node [{node-3}{pSmPNgoFQE2zNCwoTzDTUQ}{192.168.0.9}{117.78.37.196:9300}]
+ 
+2017-07-07 11:03:51,860	DEBUG	[org.elasticsearch.client.transport.TransportClientNodesService.addTransportAddresses(TransportClientNodesService.java:177)]	[Domo] adding address [{#transport#-4}{117.78.37.177}{117.78.37.177:9300}]
+ 
+2017-07-07 11:03:52,968	DEBUG	[org.elasticsearch.client.transport.TransportClientNodesService$SimpleNodeSampler.doSample(TransportClientNodesService.java:356)]	[Domo] failed to connect to node [{#transport#-2}{117.78.37.224}{117.78.37.224:9300}], removed from nodes list
+ ConnectTransportException[[][117.78.37.224:9300] connect_timeout[30s]]; nested: ConnectException[Connection refused: no further information: /117.78.37.224:9300];
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannelsLight(NettyTransport.java:952)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:916)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNodeLight(NettyTransport.java:888)
+	at org.elasticsearch.transport.TransportService.connectToNodeLight(TransportService.java:267)
+	at org.elasticsearch.client.transport.TransportClientNodesService$SimpleNodeSampler.doSample(TransportClientNodesService.java:354)
+	at org.elasticsearch.client.transport.TransportClientNodesService$NodeSampler.sample(TransportClientNodesService.java:300)
+	at org.elasticsearch.client.transport.TransportClientNodesService.addTransportAddresses(TransportClientNodesService.java:181)
+	at org.elasticsearch.client.transport.TransportClient.addTransportAddress(TransportClient.java:236)
+	at connectES.ElasticsearchTools.<clinit>(ElasticsearchTools.java:46)
+Caused by: java.net.ConnectException: Connection refused: no further information: /117.78.37.224:9300
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(Unknown Source)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:152)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:105)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:79)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+2017-07-07 11:03:53,030	DEBUG	[org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:931)]	[Domo] connected to node [{#transport#-4}{117.78.37.177}{117.78.37.177:9300}]
+ 
+2017-07-07 11:03:53,108	DEBUG	[org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:931)]	[Domo] connected to node [{node-4}{Ys9iMtERRceJpEBMAaKbNQ}{192.168.0.17}{117.78.37.177:9300}]
+ 
+2017-07-07 11:06:22,418	INFO	[org.elasticsearch.plugins.PluginsService.<init>(PluginsService.java:180)]	[Guido Carosella] modules [], plugins [], sites []
+ 
+2017-07-07 11:06:22,449	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Guido Carosella] creating thread_pool [force_merge], type [fixed], size [1], queue_size [null]
+ 
+2017-07-07 11:06:22,449	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Guido Carosella] creating thread_pool [percolate], type [fixed], size [4], queue_size [1k]
+ 
+2017-07-07 11:06:22,464	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:524)]	[Guido Carosella] creating thread_pool [fetch_shard_started], type [scaling], min [1], size [8], keep_alive [5m]
+ 
+2017-07-07 11:06:22,464	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Guido Carosella] creating thread_pool [listener], type [fixed], size [2], queue_size [null]
+ 
+2017-07-07 11:06:22,464	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Guido Carosella] creating thread_pool [index], type [fixed], size [4], queue_size [200]
+ 
+2017-07-07 11:06:22,464	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:524)]	[Guido Carosella] creating thread_pool [refresh], type [scaling], min [1], size [2], keep_alive [5m]
+ 
+2017-07-07 11:06:22,464	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Guido Carosella] creating thread_pool [suggest], type [fixed], size [4], queue_size [1k]
+ 
+2017-07-07 11:06:22,464	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:445)]	[Guido Carosella] creating thread_pool [generic], type [cached], keep_alive [30s]
+ 
+2017-07-07 11:06:22,480	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:524)]	[Guido Carosella] creating thread_pool [warmer], type [scaling], min [1], size [2], keep_alive [5m]
+ 
+2017-07-07 11:06:22,480	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Guido Carosella] creating thread_pool [search], type [fixed], size [7], queue_size [1k]
+ 
+2017-07-07 11:06:22,480	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:524)]	[Guido Carosella] creating thread_pool [flush], type [scaling], min [1], size [2], keep_alive [5m]
+ 
+2017-07-07 11:06:22,480	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:524)]	[Guido Carosella] creating thread_pool [fetch_shard_store], type [scaling], min [1], size [8], keep_alive [5m]
+ 
+2017-07-07 11:06:22,480	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:524)]	[Guido Carosella] creating thread_pool [management], type [scaling], min [1], size [5], keep_alive [5m]
+ 
+2017-07-07 11:06:22,480	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Guido Carosella] creating thread_pool [get], type [fixed], size [4], queue_size [1k]
+ 
+2017-07-07 11:06:22,480	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Guido Carosella] creating thread_pool [bulk], type [fixed], size [4], queue_size [50]
+ 
+2017-07-07 11:06:22,480	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:524)]	[Guido Carosella] creating thread_pool [snapshot], type [scaling], min [1], size [2], keep_alive [5m]
+ 
+2017-07-07 11:06:23,572	DEBUG	[org.elasticsearch.common.network.IfConfig.doLogging(IfConfig.java:107)]	configuration:
+
+lo
+        Software Loopback Interface 1
+        inet 127.0.0.1 netmask:255.0.0.0 broadcast:127.255.255.255 scope:host
+        inet6 ::1 prefixlen:128 scope:host
+        UP MULTICAST LOOPBACK mtu:-1 index:1
+
+net0
+        WAN Miniport (SSTP)
+        MULTICAST mtu:-1 index:2
+
+net1
+        WAN Miniport (IKEv2)
+        MULTICAST mtu:-1 index:3
+
+net2
+        WAN Miniport (L2TP)
+        MULTICAST mtu:-1 index:4
+
+net3
+        WAN Miniport (PPTP)
+        MULTICAST mtu:-1 index:5
+
+ppp0
+        WAN Miniport (PPPOE)
+        MULTICAST mtu:-1 index:6
+
+eth0
+        WAN Miniport (IPv6)
+        MULTICAST mtu:-1 index:7
+
+eth1
+        WAN Miniport (Network Monitor)
+        MULTICAST mtu:-1 index:8
+
+eth2
+        WAN Miniport (IP)
+        MULTICAST mtu:-1 index:9
+
+ppp1
+        RAS Async Adapter
+        MULTICAST mtu:-1 index:10
+
+net4
+        Bluetooth 
+        MULTICAST mtu:-1 index:11
+
+eth3
+        Bluetooth 
+        inet6 fe80::3c4c:f6a:8c09:60f1 prefixlen:64 scope:link
+        hardware B8:EE:65:A1:C1:36
+        MULTICAST mtu:1500 index:12
+
+eth4
+        VMware Virtual Ethernet Adapter for VMnet1
+        inet 192.168.206.1 netmask:255.255.255.0 broadcast:192.168.206.255 scope:site
+        inet6 fe80::1d5d:1a62:e549:fdfd prefixlen:64 scope:link
+        hardware 00:50:56:C0:00:01
+        UP MULTICAST mtu:1500 index:13
+
+eth5
+        VMware Virtual Ethernet Adapter for VMnet8
+        inet 192.168.112.1 netmask:255.255.255.0 broadcast:192.168.112.255 scope:site
+        inet6 fe80::50e:ba73:6410:3412 prefixlen:64 scope:link
+        hardware 00:50:56:C0:00:08
+        UP MULTICAST mtu:1500 index:14
+
+eth6
+        Qualcomm Atheros AR8162/8166/8168 PCI-E Fast Ethernet Controller (NDIS 6.20)
+        inet 211.87.229.88 netmask:255.255.255.0 broadcast:211.87.229.255
+        inet6 2001:da8:7001:4002:5055:34d6:1a54:e36e prefixlen:64
+        inet6 2001:da8:7001:4002:4d2a:aa90:46ca:192 prefixlen:128
+        inet6 fe80::5055:34d6:1a54:e36e prefixlen:128 scope:link
+        hardware F0:76:1C:56:7A:F0
+        UP MULTICAST mtu:1500 index:15
+
+wlan0
+        Qualcomm Atheros AR9485WB-EG Wireless Network Adapter
+        inet6 fe80::1829:3f66:3f1e:faac prefixlen:64 scope:link
+        hardware B8:EE:65:A1:83:42
+        MULTICAST mtu:1500 index:16
+
+net5
+        Microsoft 6to4 Adapter
+        MULTICAST mtu:-1 index:17
+
+net6
+        Teredo Tunneling Pseudo-Interface
+        inet6 fe80::100:7f:fffe prefixlen:64 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:18
+
+net7
+        Microsoft 6to4 Adapter #2
+        MULTICAST mtu:-1 index:19
+
+net8
+        Microsoft 6to4 Adapter #3
+        MULTICAST mtu:-1 index:20
+
+net9
+        Microsoft 6to4 Adapter #4
+        MULTICAST mtu:-1 index:21
+
+net10
+        Microsoft ISATAP Adapter #3
+        inet6 fe80::5efe:c0a8:7001 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:22
+
+net11
+        Microsoft ISATAP Adapter #2
+        inet6 fe80::5efe:c0a8:ce01 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:23
+
+net12
+        Microsoft 6to4 Adapter #5
+        MULTICAST mtu:-1 index:24
+
+net13
+        Microsoft 6to4 Adapter #6
+        MULTICAST mtu:-1 index:25
+
+net14
+        Microsoft ISATAP Adapter #4
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:26
+
+net15
+        Microsoft ISATAP Adapter #5
+        inet6 fe80::5efe:c0a8:1701 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:27
+
+wlan1
+        Microsoft Virtual WiFi Miniport Adapter
+        inet 192.168.23.1 netmask:255.255.255.0 broadcast:192.168.23.255 scope:site
+        inet6 fe80::d883:8319:26d:20ac prefixlen:64 scope:link
+        hardware 2A:EE:65:A1:83:42
+        UP MULTICAST mtu:1500 index:28
+
+net16
+        Microsoft ISATAP Adapter #6
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:29
+
+net17
+        Microsoft 6to4 Adapter #7
+        MULTICAST mtu:-1 index:30
+
+net18
+        Microsoft ISATAP Adapter
+        inet6 fe80::200:5efe:d357:e558 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:31
+
+wlan2
+        Qualcomm Atheros AR9485WB-EG Wireless Network Adapter-Virtual WiFi Filter Driver-0000
+        MULTICAST mtu:-1 index:32
+
+wlan3
+        Qualcomm Atheros AR9485WB-EG Wireless Network Adapter-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:33
+
+eth7
+        Qualcomm Atheros AR8162/8166/8168 PCI-E Fast Ethernet Controller (NDIS 6.20)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:34
+
+eth8
+        Qualcomm Atheros AR8162/8166/8168 PCI-E Fast Ethernet Controller (NDIS 6.20)-WFP LightWeight Filter-0000
+        MULTICAST mtu:-1 index:35
+
+eth9
+        WAN Miniport (Network Monitor)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:36
+
+eth10
+        WAN Miniport (IP)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:37
+
+eth11
+        WAN Miniport (IPv6)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:38
+
+wlan4
+        Qualcomm Atheros AR9485WB-EG Wireless Network Adapter-Native WiFi Filter Driver-0000
+        MULTICAST mtu:-1 index:39
+
+wlan5
+        Qualcomm Atheros AR9485WB-EG Wireless Network Adapter-WFP LightWeight Filter-0000
+        MULTICAST mtu:-1 index:40
+
+wlan6
+        Microsoft Virtual WiFi Miniport Adapter-Native WiFi Filter Driver-0000
+        MULTICAST mtu:-1 index:41
+
+wlan7
+        Microsoft Virtual WiFi Miniport Adapter-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:42
+
+wlan8
+        Microsoft Virtual WiFi Miniport Adapter-WFP LightWeight Filter-0000
+        MULTICAST mtu:-1 index:43
+
+ 
+2017-07-07 11:06:23,588	DEBUG	[org.elasticsearch.common.netty.NettyUtils.<clinit>(NettyUtils.java:104)]	using gathering [true]
+ 
+2017-07-07 11:06:23,603	DEBUG	[org.elasticsearch.client.transport.TransportClientNodesService.<init>(TransportClientNodesService.java:120)]	[Guido Carosella] node_sampler_interval[5s]
+ 
+2017-07-07 11:06:23,619	DEBUG	[org.elasticsearch.transport.netty.NettyInternalESLogger.debug(NettyInternalESLogger.java:58)]	Using select timeout of 500
+ 
+2017-07-07 11:06:23,619	DEBUG	[org.elasticsearch.transport.netty.NettyInternalESLogger.debug(NettyInternalESLogger.java:58)]	Epoll-bug workaround enabled = false
+ 
+2017-07-07 11:06:23,712	DEBUG	[org.elasticsearch.client.transport.TransportClientNodesService.addTransportAddresses(TransportClientNodesService.java:177)]	[Guido Carosella] adding address [{#transport#-1}{117.78.37.208}{117.78.37.208:9300}]
+ 
+2017-07-07 11:06:23,759	DEBUG	[org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:931)]	[Guido Carosella] connected to node [{#transport#-1}{117.78.37.208}{117.78.37.208:9300}]
+ 
+2017-07-07 11:06:23,822	DEBUG	[org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:931)]	[Guido Carosella] connected to node [{node-1}{ZoTdllM7TvyMI1VOIaxhWQ}{192.168.0.10}{117.78.37.208:9300}]
+ 
+2017-07-07 11:06:23,822	DEBUG	[org.elasticsearch.client.transport.TransportClientNodesService.addTransportAddresses(TransportClientNodesService.java:177)]	[Guido Carosella] adding address [{#transport#-2}{117.78.37.224}{117.78.37.224:9300}]
+ 
+2017-07-07 11:06:24,976	DEBUG	[org.elasticsearch.client.transport.TransportClientNodesService$SimpleNodeSampler.doSample(TransportClientNodesService.java:356)]	[Guido Carosella] failed to connect to node [{#transport#-2}{117.78.37.224}{117.78.37.224:9300}], removed from nodes list
+ ConnectTransportException[[][117.78.37.224:9300] connect_timeout[30s]]; nested: ConnectException[Connection refused: no further information: /117.78.37.224:9300];
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannelsLight(NettyTransport.java:952)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:916)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNodeLight(NettyTransport.java:888)
+	at org.elasticsearch.transport.TransportService.connectToNodeLight(TransportService.java:267)
+	at org.elasticsearch.client.transport.TransportClientNodesService$SimpleNodeSampler.doSample(TransportClientNodesService.java:354)
+	at org.elasticsearch.client.transport.TransportClientNodesService$NodeSampler.sample(TransportClientNodesService.java:300)
+	at org.elasticsearch.client.transport.TransportClientNodesService.addTransportAddresses(TransportClientNodesService.java:181)
+	at org.elasticsearch.client.transport.TransportClient.addTransportAddress(TransportClient.java:236)
+	at connectES.ElasticsearchTools.<clinit>(ElasticsearchTools.java:44)
+Caused by: java.net.ConnectException: Connection refused: no further information: /117.78.37.224:9300
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(Unknown Source)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:152)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:105)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:79)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+2017-07-07 11:06:24,992	DEBUG	[org.elasticsearch.client.transport.TransportClientNodesService.addTransportAddresses(TransportClientNodesService.java:177)]	[Guido Carosella] adding address [{#transport#-3}{117.78.37.196}{117.78.37.196:9300}]
+ 
+2017-07-07 11:06:26,084	DEBUG	[org.elasticsearch.client.transport.TransportClientNodesService$SimpleNodeSampler.doSample(TransportClientNodesService.java:356)]	[Guido Carosella] failed to connect to node [{#transport#-2}{117.78.37.224}{117.78.37.224:9300}], removed from nodes list
+ ConnectTransportException[[][117.78.37.224:9300] connect_timeout[30s]]; nested: ConnectException[Connection refused: no further information: /117.78.37.224:9300];
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannelsLight(NettyTransport.java:952)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:916)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNodeLight(NettyTransport.java:888)
+	at org.elasticsearch.transport.TransportService.connectToNodeLight(TransportService.java:267)
+	at org.elasticsearch.client.transport.TransportClientNodesService$SimpleNodeSampler.doSample(TransportClientNodesService.java:354)
+	at org.elasticsearch.client.transport.TransportClientNodesService$NodeSampler.sample(TransportClientNodesService.java:300)
+	at org.elasticsearch.client.transport.TransportClientNodesService.addTransportAddresses(TransportClientNodesService.java:181)
+	at org.elasticsearch.client.transport.TransportClient.addTransportAddress(TransportClient.java:236)
+	at connectES.ElasticsearchTools.<clinit>(ElasticsearchTools.java:45)
+Caused by: java.net.ConnectException: Connection refused: no further information: /117.78.37.224:9300
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(Unknown Source)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:152)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:105)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:79)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+2017-07-07 11:06:26,115	DEBUG	[org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:931)]	[Guido Carosella] connected to node [{#transport#-3}{117.78.37.196}{117.78.37.196:9300}]
+ 
+2017-07-07 11:06:26,240	DEBUG	[org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:931)]	[Guido Carosella] connected to node [{node-3}{pSmPNgoFQE2zNCwoTzDTUQ}{192.168.0.9}{117.78.37.196:9300}]
+ 
+2017-07-07 11:06:26,240	DEBUG	[org.elasticsearch.client.transport.TransportClientNodesService.addTransportAddresses(TransportClientNodesService.java:177)]	[Guido Carosella] adding address [{#transport#-4}{117.78.37.177}{117.78.37.177:9300}]
+ 
+2017-07-07 11:06:27,349	DEBUG	[org.elasticsearch.client.transport.TransportClientNodesService$SimpleNodeSampler.doSample(TransportClientNodesService.java:356)]	[Guido Carosella] failed to connect to node [{#transport#-2}{117.78.37.224}{117.78.37.224:9300}], removed from nodes list
+ ConnectTransportException[[][117.78.37.224:9300] connect_timeout[30s]]; nested: ConnectException[Connection refused: no further information: /117.78.37.224:9300];
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannelsLight(NettyTransport.java:952)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:916)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNodeLight(NettyTransport.java:888)
+	at org.elasticsearch.transport.TransportService.connectToNodeLight(TransportService.java:267)
+	at org.elasticsearch.client.transport.TransportClientNodesService$SimpleNodeSampler.doSample(TransportClientNodesService.java:354)
+	at org.elasticsearch.client.transport.TransportClientNodesService$NodeSampler.sample(TransportClientNodesService.java:300)
+	at org.elasticsearch.client.transport.TransportClientNodesService.addTransportAddresses(TransportClientNodesService.java:181)
+	at org.elasticsearch.client.transport.TransportClient.addTransportAddress(TransportClient.java:236)
+	at connectES.ElasticsearchTools.<clinit>(ElasticsearchTools.java:46)
+Caused by: java.net.ConnectException: Connection refused: no further information: /117.78.37.224:9300
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(Unknown Source)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:152)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:105)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:79)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+2017-07-07 11:06:27,412	DEBUG	[org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:931)]	[Guido Carosella] connected to node [{#transport#-4}{117.78.37.177}{117.78.37.177:9300}]
+ 
+2017-07-07 11:06:27,490	DEBUG	[org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:931)]	[Guido Carosella] connected to node [{node-4}{Ys9iMtERRceJpEBMAaKbNQ}{192.168.0.17}{117.78.37.177:9300}]
+ 
+2017-07-07 11:06:27,708	DEBUG	[org.elasticsearch.common.compress.lzf.LZFCompressor.<init>(LZFCompressor.java:49)]	using decoder[VanillaChunkDecoder] 
+ 
+2017-07-07 11:06:51,983	INFO	[org.elasticsearch.plugins.PluginsService.<init>(PluginsService.java:180)]	[Photon] modules [], plugins [], sites []
+ 
+2017-07-07 11:06:52,014	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Photon] creating thread_pool [force_merge], type [fixed], size [1], queue_size [null]
+ 
+2017-07-07 11:06:52,014	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Photon] creating thread_pool [percolate], type [fixed], size [4], queue_size [1k]
+ 
+2017-07-07 11:06:52,030	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:524)]	[Photon] creating thread_pool [fetch_shard_started], type [scaling], min [1], size [8], keep_alive [5m]
+ 
+2017-07-07 11:06:52,030	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Photon] creating thread_pool [listener], type [fixed], size [2], queue_size [null]
+ 
+2017-07-07 11:06:52,030	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Photon] creating thread_pool [index], type [fixed], size [4], queue_size [200]
+ 
+2017-07-07 11:06:52,030	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:524)]	[Photon] creating thread_pool [refresh], type [scaling], min [1], size [2], keep_alive [5m]
+ 
+2017-07-07 11:06:52,030	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Photon] creating thread_pool [suggest], type [fixed], size [4], queue_size [1k]
+ 
+2017-07-07 11:06:52,030	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:445)]	[Photon] creating thread_pool [generic], type [cached], keep_alive [30s]
+ 
+2017-07-07 11:06:52,030	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:524)]	[Photon] creating thread_pool [warmer], type [scaling], min [1], size [2], keep_alive [5m]
+ 
+2017-07-07 11:06:52,030	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Photon] creating thread_pool [search], type [fixed], size [7], queue_size [1k]
+ 
+2017-07-07 11:06:52,030	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:524)]	[Photon] creating thread_pool [flush], type [scaling], min [1], size [2], keep_alive [5m]
+ 
+2017-07-07 11:06:52,030	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:524)]	[Photon] creating thread_pool [fetch_shard_store], type [scaling], min [1], size [8], keep_alive [5m]
+ 
+2017-07-07 11:06:52,030	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:524)]	[Photon] creating thread_pool [management], type [scaling], min [1], size [5], keep_alive [5m]
+ 
+2017-07-07 11:06:52,030	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Photon] creating thread_pool [get], type [fixed], size [4], queue_size [1k]
+ 
+2017-07-07 11:06:52,045	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:481)]	[Photon] creating thread_pool [bulk], type [fixed], size [4], queue_size [50]
+ 
+2017-07-07 11:06:52,045	DEBUG	[org.elasticsearch.threadpool.ThreadPool.rebuild(ThreadPool.java:524)]	[Photon] creating thread_pool [snapshot], type [scaling], min [1], size [2], keep_alive [5m]
+ 
+2017-07-07 11:06:53,122	DEBUG	[org.elasticsearch.common.network.IfConfig.doLogging(IfConfig.java:107)]	configuration:
+
+lo
+        Software Loopback Interface 1
+        inet 127.0.0.1 netmask:255.0.0.0 broadcast:127.255.255.255 scope:host
+        inet6 ::1 prefixlen:128 scope:host
+        UP MULTICAST LOOPBACK mtu:-1 index:1
+
+net0
+        WAN Miniport (SSTP)
+        MULTICAST mtu:-1 index:2
+
+net1
+        WAN Miniport (IKEv2)
+        MULTICAST mtu:-1 index:3
+
+net2
+        WAN Miniport (L2TP)
+        MULTICAST mtu:-1 index:4
+
+net3
+        WAN Miniport (PPTP)
+        MULTICAST mtu:-1 index:5
+
+ppp0
+        WAN Miniport (PPPOE)
+        MULTICAST mtu:-1 index:6
+
+eth0
+        WAN Miniport (IPv6)
+        MULTICAST mtu:-1 index:7
+
+eth1
+        WAN Miniport (Network Monitor)
+        MULTICAST mtu:-1 index:8
+
+eth2
+        WAN Miniport (IP)
+        MULTICAST mtu:-1 index:9
+
+ppp1
+        RAS Async Adapter
+        MULTICAST mtu:-1 index:10
+
+net4
+        Bluetooth 
+        MULTICAST mtu:-1 index:11
+
+eth3
+        Bluetooth 
+        inet6 fe80::3c4c:f6a:8c09:60f1 prefixlen:64 scope:link
+        hardware B8:EE:65:A1:C1:36
+        MULTICAST mtu:1500 index:12
+
+eth4
+        VMware Virtual Ethernet Adapter for VMnet1
+        inet 192.168.206.1 netmask:255.255.255.0 broadcast:192.168.206.255 scope:site
+        inet6 fe80::1d5d:1a62:e549:fdfd prefixlen:64 scope:link
+        hardware 00:50:56:C0:00:01
+        UP MULTICAST mtu:1500 index:13
+
+eth5
+        VMware Virtual Ethernet Adapter for VMnet8
+        inet 192.168.112.1 netmask:255.255.255.0 broadcast:192.168.112.255 scope:site
+        inet6 fe80::50e:ba73:6410:3412 prefixlen:64 scope:link
+        hardware 00:50:56:C0:00:08
+        UP MULTICAST mtu:1500 index:14
+
+eth6
+        Qualcomm Atheros AR8162/8166/8168 PCI-E Fast Ethernet Controller (NDIS 6.20)
+        inet 211.87.229.88 netmask:255.255.255.0 broadcast:211.87.229.255
+        inet6 2001:da8:7001:4002:5055:34d6:1a54:e36e prefixlen:64
+        inet6 2001:da8:7001:4002:4d2a:aa90:46ca:192 prefixlen:128
+        inet6 fe80::5055:34d6:1a54:e36e prefixlen:128 scope:link
+        hardware F0:76:1C:56:7A:F0
+        UP MULTICAST mtu:1500 index:15
+
+wlan0
+        Qualcomm Atheros AR9485WB-EG Wireless Network Adapter
+        inet6 fe80::1829:3f66:3f1e:faac prefixlen:64 scope:link
+        hardware B8:EE:65:A1:83:42
+        MULTICAST mtu:1500 index:16
+
+net5
+        Microsoft 6to4 Adapter
+        MULTICAST mtu:-1 index:17
+
+net6
+        Teredo Tunneling Pseudo-Interface
+        inet6 fe80::100:7f:fffe prefixlen:64 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:18
+
+net7
+        Microsoft 6to4 Adapter #2
+        MULTICAST mtu:-1 index:19
+
+net8
+        Microsoft 6to4 Adapter #3
+        MULTICAST mtu:-1 index:20
+
+net9
+        Microsoft 6to4 Adapter #4
+        MULTICAST mtu:-1 index:21
+
+net10
+        Microsoft ISATAP Adapter #3
+        inet6 fe80::5efe:c0a8:7001 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:22
+
+net11
+        Microsoft ISATAP Adapter #2
+        inet6 fe80::5efe:c0a8:ce01 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:23
+
+net12
+        Microsoft 6to4 Adapter #5
+        MULTICAST mtu:-1 index:24
+
+net13
+        Microsoft 6to4 Adapter #6
+        MULTICAST mtu:-1 index:25
+
+net14
+        Microsoft ISATAP Adapter #4
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:26
+
+net15
+        Microsoft ISATAP Adapter #5
+        inet6 fe80::5efe:c0a8:1701 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:27
+
+wlan1
+        Microsoft Virtual WiFi Miniport Adapter
+        inet 192.168.23.1 netmask:255.255.255.0 broadcast:192.168.23.255 scope:site
+        inet6 fe80::d883:8319:26d:20ac prefixlen:64 scope:link
+        hardware 2A:EE:65:A1:83:42
+        UP MULTICAST mtu:1500 index:28
+
+net16
+        Microsoft ISATAP Adapter #6
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:29
+
+net17
+        Microsoft 6to4 Adapter #7
+        MULTICAST mtu:-1 index:30
+
+net18
+        Microsoft ISATAP Adapter
+        inet6 fe80::200:5efe:d357:e558 prefixlen:128 scope:link
+        hardware 00:00:00:00:00:00:00:E0
+        POINTOPOINT mtu:1280 index:31
+
+wlan2
+        Qualcomm Atheros AR9485WB-EG Wireless Network Adapter-Virtual WiFi Filter Driver-0000
+        MULTICAST mtu:-1 index:32
+
+wlan3
+        Qualcomm Atheros AR9485WB-EG Wireless Network Adapter-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:33
+
+eth7
+        Qualcomm Atheros AR8162/8166/8168 PCI-E Fast Ethernet Controller (NDIS 6.20)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:34
+
+eth8
+        Qualcomm Atheros AR8162/8166/8168 PCI-E Fast Ethernet Controller (NDIS 6.20)-WFP LightWeight Filter-0000
+        MULTICAST mtu:-1 index:35
+
+eth9
+        WAN Miniport (Network Monitor)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:36
+
+eth10
+        WAN Miniport (IP)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:37
+
+eth11
+        WAN Miniport (IPv6)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:38
+
+wlan4
+        Qualcomm Atheros AR9485WB-EG Wireless Network Adapter-Native WiFi Filter Driver-0000
+        MULTICAST mtu:-1 index:39
+
+wlan5
+        Qualcomm Atheros AR9485WB-EG Wireless Network Adapter-WFP LightWeight Filter-0000
+        MULTICAST mtu:-1 index:40
+
+wlan6
+        Microsoft Virtual WiFi Miniport Adapter-Native WiFi Filter Driver-0000
+        MULTICAST mtu:-1 index:41
+
+wlan7
+        Microsoft Virtual WiFi Miniport Adapter-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:42
+
+wlan8
+        Microsoft Virtual WiFi Miniport Adapter-WFP LightWeight Filter-0000
+        MULTICAST mtu:-1 index:43
+
+ 
+2017-07-07 11:06:53,137	DEBUG	[org.elasticsearch.common.netty.NettyUtils.<clinit>(NettyUtils.java:104)]	using gathering [true]
+ 
+2017-07-07 11:06:53,169	DEBUG	[org.elasticsearch.client.transport.TransportClientNodesService.<init>(TransportClientNodesService.java:120)]	[Photon] node_sampler_interval[5s]
+ 
+2017-07-07 11:06:53,184	DEBUG	[org.elasticsearch.transport.netty.NettyInternalESLogger.debug(NettyInternalESLogger.java:58)]	Using select timeout of 500
+ 
+2017-07-07 11:06:53,184	DEBUG	[org.elasticsearch.transport.netty.NettyInternalESLogger.debug(NettyInternalESLogger.java:58)]	Epoll-bug workaround enabled = false
+ 
+2017-07-07 11:06:53,262	DEBUG	[org.elasticsearch.client.transport.TransportClientNodesService.addTransportAddresses(TransportClientNodesService.java:177)]	[Photon] adding address [{#transport#-1}{117.78.37.208}{117.78.37.208:9300}]
+ 
+2017-07-07 11:06:53,309	DEBUG	[org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:931)]	[Photon] connected to node [{#transport#-1}{117.78.37.208}{117.78.37.208:9300}]
+ 
+2017-07-07 11:06:53,387	DEBUG	[org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:931)]	[Photon] connected to node [{node-1}{ZoTdllM7TvyMI1VOIaxhWQ}{192.168.0.10}{117.78.37.208:9300}]
+ 
+2017-07-07 11:06:53,387	DEBUG	[org.elasticsearch.client.transport.TransportClientNodesService.addTransportAddresses(TransportClientNodesService.java:177)]	[Photon] adding address [{#transport#-2}{117.78.37.224}{117.78.37.224:9300}]
+ 
+2017-07-07 11:06:54,573	DEBUG	[org.elasticsearch.client.transport.TransportClientNodesService$SimpleNodeSampler.doSample(TransportClientNodesService.java:356)]	[Photon] failed to connect to node [{#transport#-2}{117.78.37.224}{117.78.37.224:9300}], removed from nodes list
+ ConnectTransportException[[][117.78.37.224:9300] connect_timeout[30s]]; nested: ConnectException[Connection refused: no further information: /117.78.37.224:9300];
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannelsLight(NettyTransport.java:952)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:916)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNodeLight(NettyTransport.java:888)
+	at org.elasticsearch.transport.TransportService.connectToNodeLight(TransportService.java:267)
+	at org.elasticsearch.client.transport.TransportClientNodesService$SimpleNodeSampler.doSample(TransportClientNodesService.java:354)
+	at org.elasticsearch.client.transport.TransportClientNodesService$NodeSampler.sample(TransportClientNodesService.java:300)
+	at org.elasticsearch.client.transport.TransportClientNodesService.addTransportAddresses(TransportClientNodesService.java:181)
+	at org.elasticsearch.client.transport.TransportClient.addTransportAddress(TransportClient.java:236)
+	at connectES.ElasticsearchTools.<clinit>(ElasticsearchTools.java:44)
+Caused by: java.net.ConnectException: Connection refused: no further information: /117.78.37.224:9300
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(Unknown Source)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:152)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:105)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:79)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+2017-07-07 11:06:54,573	DEBUG	[org.elasticsearch.client.transport.TransportClientNodesService.addTransportAddresses(TransportClientNodesService.java:177)]	[Photon] adding address [{#transport#-3}{117.78.37.196}{117.78.37.196:9300}]
+ 
+2017-07-07 11:06:55,680	DEBUG	[org.elasticsearch.client.transport.TransportClientNodesService$SimpleNodeSampler.doSample(TransportClientNodesService.java:356)]	[Photon] failed to connect to node [{#transport#-2}{117.78.37.224}{117.78.37.224:9300}], removed from nodes list
+ ConnectTransportException[[][117.78.37.224:9300] connect_timeout[30s]]; nested: ConnectException[Connection refused: no further information: /117.78.37.224:9300];
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannelsLight(NettyTransport.java:952)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:916)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNodeLight(NettyTransport.java:888)
+	at org.elasticsearch.transport.TransportService.connectToNodeLight(TransportService.java:267)
+	at org.elasticsearch.client.transport.TransportClientNodesService$SimpleNodeSampler.doSample(TransportClientNodesService.java:354)
+	at org.elasticsearch.client.transport.TransportClientNodesService$NodeSampler.sample(TransportClientNodesService.java:300)
+	at org.elasticsearch.client.transport.TransportClientNodesService.addTransportAddresses(TransportClientNodesService.java:181)
+	at org.elasticsearch.client.transport.TransportClient.addTransportAddress(TransportClient.java:236)
+	at connectES.ElasticsearchTools.<clinit>(ElasticsearchTools.java:45)
+Caused by: java.net.ConnectException: Connection refused: no further information: /117.78.37.224:9300
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(Unknown Source)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:152)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:105)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:79)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+2017-07-07 11:06:55,711	DEBUG	[org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:931)]	[Photon] connected to node [{#transport#-3}{117.78.37.196}{117.78.37.196:9300}]
+ 
+2017-07-07 11:06:55,852	DEBUG	[org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:931)]	[Photon] connected to node [{node-3}{pSmPNgoFQE2zNCwoTzDTUQ}{192.168.0.9}{117.78.37.196:9300}]
+ 
+2017-07-07 11:06:55,852	DEBUG	[org.elasticsearch.client.transport.TransportClientNodesService.addTransportAddresses(TransportClientNodesService.java:177)]	[Photon] adding address [{#transport#-4}{117.78.37.177}{117.78.37.177:9300}]
+ 
+2017-07-07 11:06:56,979	DEBUG	[org.elasticsearch.client.transport.TransportClientNodesService$SimpleNodeSampler.doSample(TransportClientNodesService.java:356)]	[Photon] failed to connect to node [{#transport#-2}{117.78.37.224}{117.78.37.224:9300}], removed from nodes list
+ ConnectTransportException[[][117.78.37.224:9300] connect_timeout[30s]]; nested: ConnectException[Connection refused: no further information: /117.78.37.224:9300];
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannelsLight(NettyTransport.java:952)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:916)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNodeLight(NettyTransport.java:888)
+	at org.elasticsearch.transport.TransportService.connectToNodeLight(TransportService.java:267)
+	at org.elasticsearch.client.transport.TransportClientNodesService$SimpleNodeSampler.doSample(TransportClientNodesService.java:354)
+	at org.elasticsearch.client.transport.TransportClientNodesService$NodeSampler.sample(TransportClientNodesService.java:300)
+	at org.elasticsearch.client.transport.TransportClientNodesService.addTransportAddresses(TransportClientNodesService.java:181)
+	at org.elasticsearch.client.transport.TransportClient.addTransportAddress(TransportClient.java:236)
+	at connectES.ElasticsearchTools.<clinit>(ElasticsearchTools.java:46)
+Caused by: java.net.ConnectException: Connection refused: no further information: /117.78.37.224:9300
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(Unknown Source)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:152)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:105)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:79)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+2017-07-07 11:06:57,041	DEBUG	[org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:931)]	[Photon] connected to node [{#transport#-4}{117.78.37.177}{117.78.37.177:9300}]
+ 
+2017-07-07 11:06:57,104	DEBUG	[org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:931)]	[Photon] connected to node [{node-4}{Ys9iMtERRceJpEBMAaKbNQ}{192.168.0.17}{117.78.37.177:9300}]
+ 
+2017-07-07 11:06:57,307	DEBUG	[org.elasticsearch.common.compress.lzf.LZFCompressor.<init>(LZFCompressor.java:49)]	using decoder[VanillaChunkDecoder] 
+ 

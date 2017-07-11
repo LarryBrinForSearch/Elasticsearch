@@ -1,10 +1,5 @@
-/searchFromES/
-<<<<<<< HEAD
 /connectES/
-=======
-/InsertUpdateDemo/
-/log4j.properties
+/jsonObj/
 /main/
 /mysqlToES/
-/jsonObj/
->>>>>>> refs/remotes/origin/chen
+/searchFromES/
