@@ -1,4 +1,5 @@
 package searchFromES;
+import java.net.InetSocketAddress;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -6,7 +7,10 @@ import java.util.Map;
 import org.elasticsearch.action.search.SearchRequestBuilder;
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.client.Client;
+import org.elasticsearch.client.transport.TransportClient;
+import org.elasticsearch.common.settings.Settings;
 import org.elasticsearch.common.text.Text;
+import org.elasticsearch.common.transport.InetSocketTransportAddress;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.search.SearchHit;
 import org.elasticsearch.search.SearchHits;
@@ -34,9 +38,21 @@ public class SearchFromES {
 	
 	static Client client = null;
 	
-	public static void initSearch(Client clients){
-		client=clients;
+	static{
+		Settings settings = Settings.settingsBuilder()  
+                .put("cluster.name", "hw_es_cluster").build();  
+		try {  
+            //初始化连接客户端  
+            client = new TransportClient.Builder().settings(settings).build()  
+                    .addTransportAddress(new InetSocketTransportAddress(new InetSocketAddress("117.78.37.208",9300)))  
+                    .addTransportAddress(new InetSocketTransportAddress(new InetSocketAddress("117.78.37.224",9300)))  
+                    .addTransportAddress(new InetSocketTransportAddress(new InetSocketAddress("117.78.37.196",9300)))
+                    .addTransportAddress(new InetSocketTransportAddress(new InetSocketAddress("117.78.37.177",9300)));  
+        }catch (Exception e){  
+            e.printStackTrace();  
+        }  
 	}
+	
 	
 	public static void queryWithString(String target) {
 		SearchRequestBuilder responsebuilder = client.prepareSearch("crawler").setTypes("website");
