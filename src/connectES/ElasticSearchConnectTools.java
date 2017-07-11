@@ -1,4 +1,4 @@
-﻿package connectES;
+package connectES;
 import java.net.InetSocketAddress;
 import java.util.List;
 
@@ -22,41 +22,42 @@ import org.elasticsearch.search.aggregations.bucket.terms.Terms;
 import org.elasticsearch.search.aggregations.bucket.terms.TermsBuilder;
 import org.elasticsearch.search.aggregations.metrics.MetricsAggregationBuilder;
 import org.elasticsearch.search.aggregations.metrics.cardinality.Cardinality;
-import org.joda.time.DateTime;  
-public class ElasticsearchTools {
-
+import org.joda.time.DateTime; 
+public class ElasticSearchConnectTools {
+      
+	private Client client = null;
+	boolean inited=false;
 	
-	//elasticsearch2.3.4客户端
-	static Client client = null;
-	/*
-	 * 设置集群相关信息
-	 */
-	static{
+	public Client getClient() {
+		return client;
+	}
+	public void setClient(Client client) {
+		this.client = client;
+	}
+	public boolean isInited() {
+		return inited;
+	}
+	public void setInited(boolean inited) {
+		this.inited = inited;
+	}
+	
+	public void connectToES(){
 		Settings settings = Settings.settingsBuilder()  
-                .put("cluster.name", "hw_es_cluster").build();  
+                .put("cluster.name", "hw_es_cluster").build();
+//        .put("cluster.name", "elasticsearch").build();
+		
 		try {  
             //初始化连接客户端  
             client = new TransportClient.Builder().settings(settings).build()  
-                    .addTransportAddress(new InetSocketTransportAddress(new InetSocketAddress("117.78.37.208",9300)))  
+                    .addTransportAddress(new InetSocketTransportAddress(new InetSocketAddress("117.78.37.208",9300))) 
                     .addTransportAddress(new InetSocketTransportAddress(new InetSocketAddress("117.78.37.224",9300)))  
                     .addTransportAddress(new InetSocketTransportAddress(new InetSocketAddress("117.78.37.196",9300)))
-                    .addTransportAddress(new InetSocketTransportAddress(new InetSocketAddress("117.78.37.177",9300)));  
+                  .addTransportAddress(new InetSocketTransportAddress(new InetSocketAddress("117.78.37.177",9300)));  
+//                  .addTransportAddress(new InetSocketTransportAddress(new InetSocketAddress("127.0.0.1",9300)));  
         }catch (Exception e){  
             e.printStackTrace();  
         }  
-	}
-        
-        
- 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-//		System.out.println("开始创建索引");
-//		client.admin().indices().prepareCreate("xxk").get();
-//		System.out.println("索引创建成功");
-		SearchFromES.initSearch(client);
-		SearchFromES.aggSearch3("中国","");
-		System.out.println("end");
+		this.setInited(true);
 	}
 	
-
 }
