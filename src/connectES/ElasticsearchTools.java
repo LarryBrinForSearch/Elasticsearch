@@ -22,7 +22,10 @@ import org.elasticsearch.search.aggregations.bucket.terms.Terms;
 import org.elasticsearch.search.aggregations.bucket.terms.TermsBuilder;
 import org.elasticsearch.search.aggregations.metrics.MetricsAggregationBuilder;
 import org.elasticsearch.search.aggregations.metrics.cardinality.Cardinality;
-import org.joda.time.DateTime;  
+import org.joda.time.DateTime;
+
+import lsmodel.ResultModel;
+import searchFromES.SearchFromES;  
 public class ElasticsearchTools {
 
 	
@@ -54,7 +57,8 @@ public class ElasticsearchTools {
 //		client.admin().indices().prepareCreate("xxk").get();
 //		System.out.println("索引创建成功");
 		SearchFromES.initSearch(client);
-		SearchFromES.aggSearch3("中国","");
+		ResultModel rm=SearchFromES.boolQuery("美国",null);
+		System.out.println(rm.getJsonArr());
 		System.out.println("end");
 	}
 	

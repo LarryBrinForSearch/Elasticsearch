@@ -52,7 +52,7 @@ public class SearchFromES {
 	/*
 	 * match实现的多字段查询：在标题和正文中若出现目标字符串都将会匹配
 	 */
-	public static void multiQuery(String target) {
+	public static void Query(String target) {
 		SearchRequestBuilder responsebuilder = client.prepareSearch("crawler").setTypes("website");
 		SearchResponse myresponse = responsebuilder.setQuery(
 				QueryBuilders.multiMatchQuery(target, "title", "content"))
@@ -70,7 +70,7 @@ public class SearchFromES {
 
 	
 	//需要的返回结果有url，title，content，pubtime，channel_name，website_name，score
-	public static ResultModel  boolQuery(String target,String channel_name){
+	public static ResultModel  QueryAtFirst(String target,String channel_name){
 		
 		//构建搜索请求
 		//索引为lbsearch，类型为website
@@ -138,8 +138,8 @@ public class SearchFromES {
 			Map params= hits.getHits()[i].getSource();								//得到查询结果的数据源
 			Map<String,String> par = new HashMap<String,String>();
 			par.put("url", (String)params.get("url"));
-			par.put("title", title.substring(0, 70));		//取title的前70个字符
-			par.put("content", content.substring(0,300));	//取content的前300个字符
+			par.put("title", title.length()>70? title.substring(0, 70) : content);			//取title的前70个字符
+			par.put("content", content.length()>300? content.substring(0,300) : content);	//取content的前300个字符
 			par.put("pubtime", (String)params.get("pubtime"));						//得到发布时间：
 			par.put("channel_name", (String)params.get("channel_name"));			//频道名称
 			par.put("website_name", (String)params.get("website_name"));			//网站来源名称
@@ -157,7 +157,7 @@ public class SearchFromES {
 	
 	
 	//需要的返回结果有url，title，content，pubtime，channel_name，website_name，score
-		public static ResultModel  LbQuery(int atPages,int pageSize,String target,String channel_name){
+		public static ResultModel  QueryLater(int atPages,int pageSize,String target,String channel_name){
 			
 			//构建搜索请求
 			//索引为lbsearch，类型为website
@@ -225,8 +225,8 @@ public class SearchFromES {
 				Map params= hits.getHits()[i].getSource();								//得到查询结果的数据源
 				Map<String,String> par = new HashMap<String,String>();
 				par.put("url", (String)params.get("url"));
-				par.put("title", title.substring(0, 70));		//取title的前70个字符
-				par.put("content", content.substring(0,300));	//取content的前300个字符
+				par.put("title", title.length()>70? title.substring(0, 70) : content);			//取title的前70个字符
+				par.put("content", content.length()>300? content.substring(0,300) : content);	//取content的前300个字符
 				par.put("pubtime", (String)params.get("pubtime"));						//得到发布时间：
 				par.put("channel_name", (String)params.get("channel_name"));			//频道名称
 				par.put("website_name", (String)params.get("website_name"));			//网站来源名称
