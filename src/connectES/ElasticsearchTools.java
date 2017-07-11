@@ -56,9 +56,8 @@ public class ElasticsearchTools {
 //		System.out.println("开始创建索引");
 //		client.admin().indices().prepareCreate("xxk").get();
 //		System.out.println("索引创建成功");
-		SearchFromES.initSearch(client);
-		ResultModel rm=SearchFromES.boolQuery("美国",null);
-		System.out.println(rm.getJsonArr());
+		SearchFromES.QueryAtFirst("中国",null);
+		//System.out.println(rm.getJsonArr());
 		System.out.println("end");
 	}
 	

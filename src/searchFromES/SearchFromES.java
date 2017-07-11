@@ -139,7 +139,7 @@ public class SearchFromES {
 				for (Text text : titleTexts) {
 					title += text;
 				}
-				//System.out.println(hit.getScore()+"\t"+hit.getId()); // 已經被高亮的title
+				System.out.println(hit.getScore()+"\t"+hit.getId()+"\t"+title); // 已經被高亮的title
 			}
 			if (contentField != null) {
 				// 取得定义的高亮标签
@@ -154,7 +154,7 @@ public class SearchFromES {
 			Map params= hits.getHits()[i].getSource();								//得到查询结果的数据源
 			Map<String,String> par = new HashMap<String,String>();
 			par.put("url", (String)params.get("url"));
-			par.put("title", title.length()>70? title.substring(0, 70) : content);			//取title的前70个字符
+			par.put("title", title);			//取title的前70个字符
 			par.put("content", content.length()>300? content.substring(0,300) : content);	//取content的前300个字符
 			par.put("pubtime", (String)params.get("pubtime"));						//得到发布时间：
 			par.put("channel_name", (String)params.get("channel_name"));			//频道名称
@@ -241,7 +241,7 @@ public class SearchFromES {
 				Map params= hits.getHits()[i].getSource();								//得到查询结果的数据源
 				Map<String,String> par = new HashMap<String,String>();
 				par.put("url", (String)params.get("url"));
-				par.put("title", title.length()>70? title.substring(0, 70) : content);			//取title的前70个字符
+				par.put("title", title);			//取title的前70个字符
 				par.put("content", content.length()>300? content.substring(0,300) : content);	//取content的前300个字符
 				par.put("pubtime", (String)params.get("pubtime"));						//得到发布时间：
 				par.put("channel_name", (String)params.get("channel_name"));			//频道名称
