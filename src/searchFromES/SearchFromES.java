@@ -1,12 +1,22 @@
 package searchFromES;
+import java.net.InetSocketAddress;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
+
+import org.elasticsearch.action.admin.indices.analyze.AnalyzeAction;
+import org.elasticsearch.action.admin.indices.analyze.AnalyzeRequestBuilder;
+import org.elasticsearch.action.admin.indices.analyze.AnalyzeResponse;
 import org.elasticsearch.action.search.SearchRequestBuilder;
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.client.Client;
+import org.elasticsearch.client.IndicesAdminClient;
+import org.elasticsearch.client.transport.TransportClient;
+import org.elasticsearch.common.settings.Settings;
 import org.elasticsearch.common.text.Text;
+import org.elasticsearch.common.transport.InetSocketTransportAddress;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.search.SearchHit;
 import org.elasticsearch.search.SearchHits;
@@ -34,9 +44,21 @@ public class SearchFromES {
 	
 	static Client client = null;
 	
-	public static void initSearch(Client clients){
-		client=clients;
+	static{
+		Settings settings = Settings.settingsBuilder()  
+                .put("cluster.name", "hw_es_cluster").build();  
+		try {  
+            //初始化连接客户端  
+            client = new TransportClient.Builder().settings(settings).build()  
+                    .addTransportAddress(new InetSocketTransportAddress(new InetSocketAddress("117.78.37.208",9300)))  
+                    .addTransportAddress(new InetSocketTransportAddress(new InetSocketAddress("117.78.37.224",9300)))  
+                    .addTransportAddress(new InetSocketTransportAddress(new InetSocketAddress("117.78.37.196",9300)))
+                    .addTransportAddress(new InetSocketTransportAddress(new InetSocketAddress("117.78.37.177",9300)));  
+        }catch (Exception e){  
+            e.printStackTrace();  
+        }  
 	}
+	
 	
 	public static void queryWithString(String target) {
 		SearchRequestBuilder responsebuilder = client.prepareSearch("crawler").setTypes("website");
@@ -52,7 +74,7 @@ public class SearchFromES {
 	/*
 	 * match实现的多字段查询：在标题和正文中若出现目标字符串都将会匹配
 	 */
-	public static void multiQuery(String target) {
+	public static void Query(String target) {
 		SearchRequestBuilder responsebuilder = client.prepareSearch("crawler").setTypes("website");
 		SearchResponse myresponse = responsebuilder.setQuery(
 				QueryBuilders.multiMatchQuery(target, "title", "content"))
@@ -70,7 +92,7 @@ public class SearchFromES {
 
 	
 	//需要的返回结果有url，title，content，pubtime，channel_name，website_name，score
-	public static ResultModel  boolQuery(String target,String channel_name){
+	public static ResultModel  QueryAtFirst(String target,String channel_name,int pageSize){
 		
 		//构建搜索请求
 		//索引为lbsearch，类型为website
@@ -91,7 +113,7 @@ public class SearchFromES {
 					.minimumShouldMatch("1"));
 		}
 		responsebuilder .setFrom(1)							//从第几条开始
-						.setSize(10)						//显示几条
+						.setSize(pageSize)						//显示几条
 						.addHighlightedField("title") 							// 高亮显示的域
 						.addHighlightedField("content")
 						.setHighlighterPreTags("<span style=\"color:red\">") 	// 设置高亮域前置标签
@@ -123,7 +145,7 @@ public class SearchFromES {
 				for (Text text : titleTexts) {
 					title += text;
 				}
-				//System.out.println(hit.getScore()+"\t"+hit.getId()); // 已經被高亮的title
+				System.out.println(hit.getScore()+"\t"+hit.getId()+"\t"+title); // 已經被高亮的title
 			}
 			if (contentField != null) {
 				// 取得定义的高亮标签
@@ -138,8 +160,8 @@ public class SearchFromES {
 			Map params= hits.getHits()[i].getSource();								//得到查询结果的数据源
 			Map<String,String> par = new HashMap<String,String>();
 			par.put("url", (String)params.get("url"));
-			par.put("title", title.substring(0, 70));		//取title的前70个字符
-			par.put("content", content.substring(0,300));	//取content的前300个字符
+			par.put("title", title);			//取title的前70个字符
+			par.put("content", content);	//取content的前300个字符
 			par.put("pubtime", (String)params.get("pubtime"));						//得到发布时间：
 			par.put("channel_name", (String)params.get("channel_name"));			//频道名称
 			par.put("website_name", (String)params.get("website_name"));			//网站来源名称
@@ -157,24 +179,24 @@ public class SearchFromES {
 	
 	
 	//需要的返回结果有url，title，content，pubtime，channel_name，website_name，score
-		public static ResultModel  LbQuery(int atPages,int pageSize,String target,String channel_name){
+		public static ResultModel  QueryLater(int atPages,int pageSize,String target,String channel_name){
 			
 			//构建搜索请求
 			//索引为lbsearch，类型为website
 			SearchRequestBuilder responsebuilder = client.prepareSearch("lbsearch").setTypes("website");
-
+			
 			if (channel_name !=null)
 			{
 				responsebuilder.setQuery(QueryBuilders.boolQuery()
-						.must(QueryBuilders.matchPhraseQuery("channel_name", channel_name))
-						.should(QueryBuilders.matchPhraseQuery("title", target).boost(3f))			//标题权值高于正文
-						.should(QueryBuilders.matchPhraseQuery("content", target).boost(0.8f))		
+						.must(QueryBuilders.commonTermsQuery("channel_name", channel_name))
+						.should(QueryBuilders.commonTermsQuery("title", target).boost(3f))			//标题权值高于正文
+						.should(QueryBuilders.commonTermsQuery("content", target).boost(0.8f))		
 						.minimumShouldMatch("1"));			//标题和正文至少匹配一次
 			}
 			else{
 				responsebuilder.setQuery(QueryBuilders.boolQuery()
-						.should(QueryBuilders.matchPhraseQuery("title", target).boost(3f))			//标题权值高于正文
-						.should(QueryBuilders.matchPhraseQuery("content", target).boost(0.8f))		
+						.should(QueryBuilders.commonTermsQuery("title", target).boost(3f))			//标题权值高于正文
+						.should(QueryBuilders.commonTermsQuery("content", target).boost(0.8f))		
 						.minimumShouldMatch("1"));
 			}
 			responsebuilder .setFrom((atPages-1)*pageSize+1)							//从第几条开始
@@ -225,8 +247,8 @@ public class SearchFromES {
 				Map params= hits.getHits()[i].getSource();								//得到查询结果的数据源
 				Map<String,String> par = new HashMap<String,String>();
 				par.put("url", (String)params.get("url"));
-				par.put("title", title.substring(0, 70));		//取title的前70个字符
-				par.put("content", content.substring(0,300));	//取content的前300个字符
+				par.put("title", title);			//取title的前70个字符
+				par.put("content", content);	//取content的前300个字符
 				par.put("pubtime", (String)params.get("pubtime"));						//得到发布时间：
 				par.put("channel_name", (String)params.get("channel_name"));			//频道名称
 				par.put("website_name", (String)params.get("website_name"));			//网站来源名称
@@ -235,7 +257,7 @@ public class SearchFromES {
 				JSONObject array = new JSONObject(par);
 				jsonArr.add(array);
 			}
-			System.out.println(hits.totalHits() / 10 + "页");
+			System.out.println(hits.totalHits() / 15 + "页");
 			System.out.println(hits.getHits().length);
 			System.out.println(myresponse.getTook());
 			
@@ -269,7 +291,7 @@ public class SearchFromES {
 	public static void aggSearch(String aggField) {
 
 		SearchRequestBuilder sbuilder = client.prepareSearch("lbsearch").setTypes("website");
-
+		
 		TermsBuilder teamAgg = AggregationBuilders.terms("count").field(aggField).size(100);
 		sbuilder.addAggregation(teamAgg);
 		SearchResponse response = sbuilder.execute().actionGet();
@@ -384,4 +406,107 @@ public class SearchFromES {
 		}
 		System.out.println(hits.totalHits());
 	}
+	
+	
+	
+	public static void testIk(String s){
+		AnalyzeRequestBuilder ikRequest = new AnalyzeRequestBuilder(client,
+                							AnalyzeAction.INSTANCE,"lbsearch",s);
+        ikRequest.setTokenizer("ik_smart");
+        List<AnalyzeResponse.AnalyzeToken> ikTokenList = ikRequest.execute().actionGet().getTokens();
+
+        // 循环赋值
+        List<String> searchTermList = new ArrayList<>();
+        ikTokenList.forEach(ikToken -> { 
+        	searchTermList.add(ikToken.getTerm()); 
+        	System.out.println(ikToken.getTerm());
+        	});
+	}
+	
+	//需要的返回结果有url，title，content，pubtime，channel_name，website_name，score
+		public static ResultModel  multiQuery(String target,String channel_name,int pageSize){
+			
+			//构建搜索请求
+			//索引为lbsearch，类型为website
+			SearchRequestBuilder responsebuilder = client.prepareSearch("lbsearch").setTypes("website");
+			
+			if (channel_name !=null)
+			{
+				responsebuilder.setQuery(QueryBuilders.boolQuery()
+						.must(QueryBuilders.commonTermsQuery("channel_name", channel_name))
+						.should(QueryBuilders.commonTermsQuery("title", target).boost(3f))			//标题权值高于正文
+						.should(QueryBuilders.commonTermsQuery("content", target).boost(0.8f))		
+						.minimumShouldMatch("1"));			//标题和正文至少匹配一次
+			}
+			else{
+				responsebuilder.setQuery(QueryBuilders.boolQuery()
+						.should(QueryBuilders.commonTermsQuery("title", target).boost(3f))			//标题权值高于正文
+						.should(QueryBuilders.commonTermsQuery("content", target).boost(0.8f))		
+						.minimumShouldMatch("1"));
+			}
+			responsebuilder .setFrom(1)							//从第几条开始
+							.setSize(pageSize)						//显示几条
+							.addHighlightedField("title") 							// 高亮显示的域
+							.addHighlightedField("content")
+							.setHighlighterPreTags("<span style=\"color:red\">") 	// 设置高亮域前置标签
+							.setHighlighterPostTags("</span>") 						// 设置高亮域后置标签
+							.setExplain(true);
+			
+			SearchResponse myresponse = responsebuilder.execute().actionGet();						//进行查询
+			//得到命中的结果
+			SearchHits hits = myresponse.getHits();
+			
+			ArrayList<JSONObject> jsonArr=new ArrayList<JSONObject>();
+			
+			for (int i = 0; i < hits.getHits().length; i++) {
+				
+				SearchHit hit = hits.getHits()[i];
+				// 得到命中条目的高亮显示域
+				Map<String, HighlightField> result = hit.highlightFields();
+
+				HighlightField titleField = result.get("title");
+				HighlightField contentField = result.get("content");
+				
+				String title = titleField==null? (String)hit.getSource().get("title") : "";
+				String content = contentField==null? (String)hit.getSource().get("content") : "";
+				
+				if (titleField != null) {
+					// 取得定义的高亮标签
+					Text[] titleTexts = titleField.fragments();
+					// 为title串值增加自定义的高亮标签
+					for (Text text : titleTexts) {
+						title += text;
+					}
+					System.out.println(hit.getScore()+"\t"+hit.getId()+"\t"+title); // 已經被高亮的title
+				}
+				if (contentField != null) {
+					// 取得定义的高亮标签
+					Text[] contentTexts = contentField.fragments();
+					// 为title串值增加自定义的高亮标签
+					for (Text text : contentTexts) {
+						content += text;
+					}
+					//System.out.println(hit.getScore()+"\t"+hit.getId());  // 已經被高亮的content
+				}
+				
+				Map params= hits.getHits()[i].getSource();								//得到查询结果的数据源
+				Map<String,String> par = new HashMap<String,String>();
+				par.put("url", (String)params.get("url"));
+				par.put("title", title);			//取title的前70个字符
+				par.put("content", content);	//取content的前300个字符
+				par.put("pubtime", (String)params.get("pubtime"));						//得到发布时间：
+				par.put("channel_name", (String)params.get("channel_name"));			//频道名称
+				par.put("website_name", (String)params.get("website_name"));			//网站来源名称
+				par.put("score", hits.getHits()[i].getScore()+"");						//匹配度
+				
+				JSONObject array = new JSONObject(par);
+				jsonArr.add(array);
+			}
+			System.out.println(hits.totalHits() / 10 + "页");
+			System.out.println(hits.getHits().length);
+			System.out.println(myresponse.getTook());
+			
+			return new ResultModel(myresponse.getHits().getTotalHits(),jsonArr);
+		}
+	
 }
