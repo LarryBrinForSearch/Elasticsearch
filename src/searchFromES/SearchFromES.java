@@ -188,15 +188,15 @@ public class SearchFromES {
 			if (channel_name !=null)
 			{
 				responsebuilder.setQuery(QueryBuilders.boolQuery()
-						.must(QueryBuilders.matchPhraseQuery("channel_name", channel_name))
-						.should(QueryBuilders.matchPhraseQuery("title", target).boost(3f))			//标题权值高于正文
-						.should(QueryBuilders.matchPhraseQuery("content", target).boost(0.8f))		
+						.must(QueryBuilders.commonTermsQuery("channel_name", channel_name))
+						.should(QueryBuilders.commonTermsQuery("title", target).boost(3f))			//标题权值高于正文
+						.should(QueryBuilders.commonTermsQuery("content", target).boost(0.8f))		
 						.minimumShouldMatch("1"));			//标题和正文至少匹配一次
 			}
 			else{
 				responsebuilder.setQuery(QueryBuilders.boolQuery()
-						.should(QueryBuilders.matchPhraseQuery("title", target).boost(3f))			//标题权值高于正文
-						.should(QueryBuilders.matchPhraseQuery("content", target).boost(0.8f))		
+						.should(QueryBuilders.commonTermsQuery("title", target).boost(3f))			//标题权值高于正文
+						.should(QueryBuilders.commonTermsQuery("content", target).boost(0.8f))		
 						.minimumShouldMatch("1"));
 			}
 			responsebuilder .setFrom((atPages-1)*pageSize+1)							//从第几条开始
