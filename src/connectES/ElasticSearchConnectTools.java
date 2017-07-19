@@ -24,7 +24,7 @@ import org.elasticsearch.search.aggregations.metrics.MetricsAggregationBuilder;
 import org.elasticsearch.search.aggregations.metrics.cardinality.Cardinality;
 import org.joda.time.DateTime; 
 public class ElasticSearchConnectTools {
-      
+    public static String index="larrybrin";
 	private Client client = null;
 	boolean inited=false;
 	
@@ -49,10 +49,10 @@ public class ElasticSearchConnectTools {
 		try {  
             //初始化连接客户端  
             client = new TransportClient.Builder().settings(settings).build()  
-                    .addTransportAddress(new InetSocketTransportAddress(new InetSocketAddress("117.78.37.208",9300))) 
-                    .addTransportAddress(new InetSocketTransportAddress(new InetSocketAddress("117.78.37.224",9300)))  
-                    .addTransportAddress(new InetSocketTransportAddress(new InetSocketAddress("117.78.37.196",9300)))
-                  .addTransportAddress(new InetSocketTransportAddress(new InetSocketAddress("117.78.37.177",9300)));  
+//                    .addTransportAddress(new InetSocketTransportAddress(new InetSocketAddress("117.78.37.208",9300))) 
+                    .addTransportAddress(new InetSocketTransportAddress(new InetSocketAddress("117.78.37.224",9300))) ; 
+//                    .addTransportAddress(new InetSocketTransportAddress(new InetSocketAddress("117.78.37.196",9300)))
+//                  .addTransportAddress(new InetSocketTransportAddress(new InetSocketAddress("117.78.37.177",9300)));  
 //                  .addTransportAddress(new InetSocketTransportAddress(new InetSocketAddress("127.0.0.1",9300)));  
         }catch (Exception e){  
             e.printStackTrace();  
