@@ -29,7 +29,7 @@ import org.elasticsearch.search.aggregations.bucket.terms.TermsBuilder;
 import org.elasticsearch.search.highlight.HighlightField;
 import org.json.JSONObject;
 
-import lsmodel.ResultModel;
+import lsmodel.ResultModel;;
 
 
 /*
@@ -50,13 +50,14 @@ public class SearchFromES {
 		try {  
             //初始化连接客户端  
             client = new TransportClient.Builder().settings(settings).build()  
-                    .addTransportAddress(new InetSocketTransportAddress(new InetSocketAddress("117.78.37.208",9300)))  
+                    //.addTransportAddress(new InetSocketTransportAddress(new InetSocketAddress("117.78.37.208",9300)))  
                     .addTransportAddress(new InetSocketTransportAddress(new InetSocketAddress("117.78.37.224",9300)))  
                     .addTransportAddress(new InetSocketTransportAddress(new InetSocketAddress("117.78.37.196",9300)))
                     .addTransportAddress(new InetSocketTransportAddress(new InetSocketAddress("117.78.37.177",9300)));  
         }catch (Exception e){  
             e.printStackTrace();  
         }  
+		System.out.println("ES has been connected");
 	}
 	
 	
@@ -166,7 +167,7 @@ public class SearchFromES {
 			par.put("channel_name", (String)params.get("channel_name"));			//频道名称
 			par.put("website_name", (String)params.get("website_name"));			//网站来源名称
 			par.put("score", hits.getHits()[i].getScore()+"");						//匹配度
-			
+	
 			JSONObject array = new JSONObject(par);
 			jsonArr.add(array);
 		}
@@ -174,7 +175,7 @@ public class SearchFromES {
 		System.out.println(hits.getHits().length);
 		System.out.println(myresponse.getTook());
 		
-		return new ResultModel(myresponse.getHits().getTotalHits(),jsonArr);
+		return new ResultModel(myresponse.getHits().getTotalHits(),jsonArr,myresponse.getTook()+"",null);
 	}
 	
 	
@@ -261,7 +262,7 @@ public class SearchFromES {
 			System.out.println(hits.getHits().length);
 			System.out.println(myresponse.getTook());
 			
-			return new ResultModel(myresponse.getHits().getTotalHits(),jsonArr);
+			return new ResultModel(myresponse.getHits().getTotalHits(),jsonArr,myresponse.getTook()+"",null);
 		}
 		
 		
@@ -288,9 +289,9 @@ public class SearchFromES {
 	 * 此方法为聚合查询，查詢的是當前所有文檔 輸出結果按照aggField聚合并排序
 	 */
 
-	public static void aggSearch(String aggField) {
+	public static Map aggSearch(String aggField) {
 
-		SearchRequestBuilder sbuilder = client.prepareSearch("lbsearch").setTypes("website");
+		SearchRequestBuilder sbuilder = client.prepareSearch("larrybrin").setTypes("website");
 		
 		TermsBuilder teamAgg = AggregationBuilders.terms("count").field(aggField).size(100);
 		sbuilder.addAggregation(teamAgg);
@@ -305,18 +306,19 @@ public class SearchFromES {
 		Iterator<org.elasticsearch.search.aggregations.bucket.terms.Terms.Bucket> teamBucketIt = ((InternalTerms<StringTerms, Bucket>) Aggteam).getBuckets()
 				.iterator();
 
-		int sum = 0;
-
+		Map<String,Integer> result=new HashMap<String,Integer>();
+		
 		while (teamBucketIt.hasNext()) {
 			org.elasticsearch.search.aggregations.bucket.terms.Terms.Bucket buck = teamBucketIt.next();
 			// 文章类型名
 			String article = (String) buck.getKey();
 			// 记录数
 			long counts = buck.getDocCount();
-			System.out.println("文章类型：" + article + "\t" + "文章数量：" + counts);
-			sum += counts;
+			if(article.length()!=1)
+			System.out.println(article+'\t'+counts);
+			result.put(article, (int)counts);
 		}
-		System.out.println(sum + "!");
+		return result;
 	}
 
 	/*
@@ -409,19 +411,19 @@ public class SearchFromES {
 	
 	
 	
-	public static void testIk(String s){
-		AnalyzeRequestBuilder ikRequest = new AnalyzeRequestBuilder(client,
-                							AnalyzeAction.INSTANCE,"lbsearch",s);
-        ikRequest.setTokenizer("ik_smart");
-        List<AnalyzeResponse.AnalyzeToken> ikTokenList = ikRequest.execute().actionGet().getTokens();
-
-        // 循环赋值
-        List<String> searchTermList = new ArrayList<>();
-        ikTokenList.forEach(ikToken -> { 
-        	searchTermList.add(ikToken.getTerm()); 
-        	System.out.println(ikToken.getTerm());
-        	});
-	}
+//	public static void testIk(String s){
+//		AnalyzeRequestBuilder ikRequest = new AnalyzeRequestBuilder(client,
+//                							AnalyzeAction.INSTANCE,"lbsearch",s);
+//        ikRequest.setTokenizer("ik_smart");
+//        List<AnalyzeResponse.AnalyzeToken> ikTokenList = ikRequest.execute().actionGet().getTokens();
+//
+//        // 循环赋值
+//        List<String> searchTermList = new ArrayList<>();
+//        ikTokenList.forEach(ikToken -> { 
+//        	searchTermList.add(ikToken.getTerm()); 
+//        	System.out.println(ikToken.getTerm());
+//        	});
+//	}
 	
 	//需要的返回结果有url，title，content，pubtime，channel_name，website_name，score
 		public static ResultModel  multiQuery(String target,String channel_name,int pageSize){
@@ -430,6 +432,9 @@ public class SearchFromES {
 			//索引为lbsearch，类型为website
 			SearchRequestBuilder responsebuilder = client.prepareSearch("lbsearch").setTypes("website");
 			
+			// 构造聚合条件。等价于group by channel_name
+			TermsBuilder teamAgg = AggregationBuilders.terms("count").field("channel_name").size(20);
+			responsebuilder.addAggregation(teamAgg);
 			if (channel_name !=null)
 			{
 				responsebuilder.setQuery(QueryBuilders.boolQuery()
@@ -502,11 +507,68 @@ public class SearchFromES {
 				JSONObject array = new JSONObject(par);
 				jsonArr.add(array);
 			}
-			System.out.println(hits.totalHits() / 10 + "页");
-			System.out.println(hits.getHits().length);
-			System.out.println(myresponse.getTook());
 			
-			return new ResultModel(myresponse.getHits().getTotalHits(),jsonArr);
+			//统计结果解析
+			// aggregation结果解析
+			java.util.Map<String, Aggregation> aggMap = myresponse.getAggregations().asMap();
+	        //得到聚合count的项
+			StringTerms Aggteam = (StringTerms) aggMap.get("count");
+			Iterator<org.elasticsearch.search.aggregations.bucket.terms.Terms.Bucket> teamBucketIt = Aggteam.getBuckets()
+					.iterator();
+			//统计结果
+			HashMap<String,Long> countResult=new HashMap<String,Long>();
+			
+			long resultSum = 0;	//统计结果的总数
+			long mainResult= 0;	//前六条统计结果总数
+			int cs=0; 			//取前六条
+			while (teamBucketIt.hasNext()) {
+				org.elasticsearch.search.aggregations.bucket.terms.Terms.Bucket buck = teamBucketIt.next();
+				// 记录数
+				long counts = buck.getDocCount();
+				
+				if(cs<6){
+					countResult.put((String) buck.getKey(), counts);// 文章类型名，记录数
+					mainResult +=counts;
+				}
+				resultSum += counts;
+				cs++;
+			}
+			countResult.put("其他", resultSum-mainResult);
+			return new ResultModel(myresponse.getHits().getTotalHits(),jsonArr,myresponse.getTook()+"",countResult);
 		}
 	
+		public static void prefixQuery(String pre){
+			SearchRequestBuilder responsebuilder = client.prepareSearch("larrybrin").setTypes("website");
+			SearchResponse myresponse = responsebuilder.setQuery(
+					QueryBuilders.prefixQuery("title", pre))
+					.setFrom(1)
+					.setSize(10)
+					.setExplain(false).execute().actionGet();
+			SearchHits hits = myresponse.getHits();
+			for (int i = 0; i < hits.getHits().length; i++) {
+				// System.out.println(hits.getHits()[i].getSourceAsString());
+				System.out.println(hits.getHits()[i].getSource().get("title"));
+			}
+			System.out.println(hits.totalHits() / 10 + "页");
+			System.out.println(hits.getHits().length);
+		}
+		
+//		public static void main(String args[]){
+//			SearchFromES.aggSearch("title");
+//			System.out.println("end");
+//		}
+		
+//		 public static void queryWords(String query) throws IOException {
+//		        Configuration cfg = DefaultConfig.getInstance();
+//		        System.out.println(cfg.getMainDictionary()); // 系统默认词库
+//		        System.out.println(cfg.getQuantifierDicionary());
+//		        List<String> list = new ArrayList<String>();
+//		        StringReader input = new StringReader(query.trim());
+//		        IKSegmenter ikSeg = new IKSegmenter(input, true);   // true 用智能分词 ，false细粒度
+//		        for (Lexeme lexeme = ikSeg.next(); lexeme != null; lexeme = ikSeg.next()) {
+//		            System.out.print(lexeme.getLexemeText()+"|");
+//		        }
+//
+//		    }
+		
 }

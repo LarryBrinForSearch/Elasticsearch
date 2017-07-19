@@ -1,4 +1,10 @@
+/InsertUpdateDemo/
 /connectES/
 /dbOperations/
-/synchronize/
+/jsonObj/
+/log4j.properties
+/lsmodel/
+/main/
+/mysqlToES/
 /searchFromES/
+/synchronize/
